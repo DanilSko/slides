@@ -78,6 +78,10 @@
 						<img data-src="Pictures/networks.png">
 					</section>
 					<section>
+						<h3>Включая резульататы извлечения информации</h3>
+						<img data-src="Pictures/infonetworks.png">
+					</section>
+					<section>
 						<h3>А еще если посмотреть сверху, это похоже на</h3>
 						<img data-src="Pictures/network.png">
 					</section>
@@ -90,11 +94,11 @@
 						<img data-src="Pictures/konigbridges1.png" height = "400">
 					</section>
 					<section>
-						<h3>Так появилась теория графов</h3>
-						<img data-src="Pictures/konigbridges2.png">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/4DzIEUOnSmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</section>
 					<section>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/4DzIEUOnSmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+						<h3>Так появилась теория графов</h3>
+						<img data-src="Pictures/konigbridges2.png">
 					</section>
 					<section>
 						<h3>Транспортные сети</h3>
@@ -107,6 +111,10 @@
 					<section>
 						<h3>А вот еще один транспортный граф (сеть)</h3>
 						<img data-src="Pictures/mosmetro.png">
+					</section>
+					<section>
+						<h4>Кстати, откуда он знает, сколько мне ехать?</h4>
+						<img data-src="Pictures/yandexmetropath.png" height="500">
 					</section>
 					<section>
 						<h3>Взвешенные графы</h3>
@@ -169,6 +177,10 @@
 						<img data-src="Pictures/sixdegrees2.png" height="400">
 					</section>
 					<section>
+							<h3>Это придумал Стэнли Милгрэм</h3>
+						<img data-src="Pictures/milgram.png">
+					</section>
+					<section>
 							<h3>Small World Experiment</h3>
 						<img data-src="Pictures/smallworld.gif">
 					</section>
@@ -218,10 +230,6 @@
 					<h2 class="fragment fade-up" style="color:black; position: absolute; bottom: 5px; left: 400px;">Но... зачем?</h2>
 					</section>
 					<section>
-							<q style="font-size:130%">It’s pretty (and fashionable)</q>
-							<p>Ondrej Tichy, Charles University</p>
-					</section>
-					<section>
 							<h4>Наглядность + математическая строгость (#WinningCombo!)</h4>
 						<img data-src="Pictures/centrality.png" height="400">
 						
@@ -236,7 +244,7 @@
 						<img data-src="Pictures/betweenness.png" >
 					</section>
 					<section>
-							<h4>Это называется betweenness centrality (центральность по посредничеству)</h4>
+							<h4>Это называется betweenness centrality (центральность по посредничеству / нагрузка)</h4>
 						<img data-src="Pictures/betweenness.png" >
 					</section>
 					<!--<section>
@@ -263,27 +271,34 @@
 					</section>
 					<section>
 					<h3>Извлечение сообществ: Karate Club</h3>
-					<li>A social network of a karate club studied by Wayne W. Zachary from 1970 to 1972</li>
-					<li>Links capture interactions between the club members outside the club</li>
-					<li>During the study a conflict arose between the administrator "John A" and instructor "Mr. Hi" (pseudonyms), which led to the split of the club into two.</li>
+					<ul>
+					<li>Антрополог Уэйн Зэкэри (Wayne Zachary) изучал небольшой карате-клуб с 1970 по 1972</li>
+					<li>Он записывал неформальные связи между участниками за пределами клуба</li>
+					<li>Во время исследования случился конфликт между руководством и инструктором </li>
+					</ul>
+					<!-- During the study a conflict arose between the administrator "John A" and instructor "Mr. Hi" (pseudonyms), which led to the split of the club into two.-->
 					</section>
 					<section>
 						<h3>Извлечение сообществ: Karate Club</h3>
-						<li>Half of the members formed a new club around Mr. Hi</li>
-						<li>members from the other part found a new instructor or gave up karate.</li>
-						<li>Basing on collected data Zachary assigned correctly all but one member of the club to the groups they actually joined after the split</li>
-						<li><a href="http://www1.ind.ku.dk/complexLearning/zachary1977.pdf">Link to the paper (1977)</a></li>
+						<ul>
+						<li>Половина участников ушла вместе с инструктором делать новый клуб</li>
+						<li>Вторая половина осталась (или совсем бросила карате)</li>
+						<li>Зэкэри написал программу, которая на основе собранных до раскола данных пытается предугадать границы раскола группы</li>
+						<li><a href="http://www1.ind.ku.dk/complexLearning/zachary1977.pdf">Ссылка на статью Зэкэри (1977)</a></li>
+						</ul>
 					</section>
+					<!--
 					<section>
 						<h3>Извлечение сообществ: Karate Club</h3>
 					<q>The process leading to fission is viewed as an unequal flow of sentiments and information across the ties in a social network. This flow is unequal because it is uniquely constrained by the contextual range and sensitivity of each relationship in the network. The subsequent differential sharing of sentiments leads to the formation of subgroups with more internal stability than the group as a whole, and results in fission</q>
 					</section>
+					-->
 					<section>
-					<h3>Матрица (таблица) связей</h3>
+					<h3>Матрица (таблица) связей -- исходные данные</h3>
 						<img data-src="Pictures/karatematrix.png" height="500">
 					</section>
 					<section>
-					<h3>Сеть связей</h3>
+					<h3>Сеть этих связей</h3>
 						<img data-src="Pictures/karateviz.png" height="500">
 					</section>
 					<section>
@@ -292,6 +307,7 @@
 					</section>
 					<section>
 					<h3>Karate Club Club</h3>
+					<p>Шуточное сообщество, куда принимают каждый год первого человека, упомянувшего Karate club на научной конференции по сетевому анализу</p>
 					</section>
 				</section>
 				<section>
@@ -312,7 +328,6 @@
 					<p>Schweizer T., Schnegg M. Die soziale Struktur der. „Simple Storys“: Eine Netzwerkanalyse. (1998)</p>
 						<img data-src="Pictures/simplestories.png" height="420">
 					</section>
-					
 					<section>
 					<h3>Что показал сетевой анализ вселенной Marvel?</h3>
 					<li>Alberich, R., Miro-Julia, J., Rossello, F. (2002), Marvel universe looks almost like a real social network. </li>
@@ -391,9 +406,24 @@
 					</section>
 				</section>
 				<section>
+					<section>
+				<h3>Gephi (gephi.org)</h3>
+				<ul>
+				<li>Простой инструмент для анализа сетей (не надо уметь программировать)</li>
+<li>"like Photoshop but for graph data" (gephi.org)</li>
+<li>Открытый и бесплатный</li>
+<li>Написан на Java и работает на всех основных ОС</li>
+<li>Расширяемый (можно создавать плагины)</li>
+<li>…немного глючный : )</li>
+				</ul>
+					</section>
+					<section> 
+					<p style="font-size:300%"><a href="https://goo.gl/oX3VDj">goo.gl/oX3VDj</a></p>
+					</section>
 					<section> 
 					<img data-src="Pictures/lastpic.png" height="500">
 					</section>
+					
 					<section>
 						<p> <a href="https://ezlinavis.dracor.org/">Ezlinavis</a></p>
 					</section>
