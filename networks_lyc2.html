@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Сетевой анализ: продолжение</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+		<style>
+.highlight { 
+    color: orange;
+}
+</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Сетевой анализ — 2 </h1>
+						<h3>Инструменты</h3>
+					</section>
+				</section>
+				<!-- 
+				<section>
+					<section>
+						<h3>Эту презентацию лучше не листать стрелочками</h3>
+						<p>Вперед <span color="blue">ПРОБЕЛОМ</span>, назад — ШИФТ+ПРОБЕЛОМ</p>
+					</section>
+				</section>
+				-->
+				<section>
+					<section>
+						<h3>Сеть (граф)</h3>
+						<img data-src="Pictures/network.png">
+					</section>
+					<section>
+						<h3>состоит из узлов...</h3>
+						<img data-src="Pictures/networknodes.png">
+					</section>
+					<section>
+						<h3>...и ребер</h3>
+						<img data-src="Pictures/networkedges.png">
+					</section>
+					
+				</section>
+				<section>
+					<section>
+						<h3>CSV — cамый простой формат кодирования сетей</h3>
+						<ol>
+						<li>Source,Target,Weight</li>
+						<li>Даня,Маша,2</li>
+						<li>Вася,Петя,15</li>
+						<li>Вася,Маша,1</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Как можно делать такие CSV?</h3>
+						<ol>
+						<li>В блокноте...</li>
+						<li>В любом табличном редакторе (LibreOffice/OpenOffice/Excel)</li>
+						<li>Из питона. Например: <a href="https://github.com/DanilSko/lyc_compling/blob/master/Networks_24052018/Text2NetworkSample_Lyceum2405.ipynb">github.com/DanilSko/lyc_compling/blob/master/Networks_24052018/Text2NetworkSample_Lyceum2405.ipynb</a></li>
+						<li>Ручками в нашем Ezlinavis</li>
+						</ol>
+					</section>
+					<section>
+						<p> <a href="https://ezlinavis.dracor.org/">Ezlinavis</a></p>
+					</section>
+					<section>
+						<h2>Но в Ezlinavis нет возможностей анализа</h2>
+					</section>
+					<section>
+						<h3>Gephi (gephi.org)</h3>
+						<ul>
+							<li>Простой инструмент для анализа сетей (не надо уметь программировать)</li>
+							<li>"like Photoshop but for graph data" (gephi.org)</li>
+							<li>Открытый и бесплатный</li>
+							<li>Написан на Java и работает на всех основных ОС</li>
+							<li>Расширяемый (можно создавать плагины)</li>
+							<li>…немного глючный : )</li>
+						</ul>
+					</section>
+					<section>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/qW59RNT_GdM?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</section>
+					<section> 
+					<p style="font-size:300%"><a href="https://goo.gl/oX3VDj">goo.gl/oX3VDj</a></p>
+					</section>
+					<section> 
+					<img data-src="Pictures/lastpic.png" height="500">
+					</section>
+					
+					
+				</section>
+				<!--<section>
+				<h2>Now — hands on with Gephi!</h2>
+				<a href="https://slides.com/danilsko/gephi">slides.com/danilsko/gephi</a>
+				</section> -->
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+			controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+		</script>
+	</body>
+</html>
