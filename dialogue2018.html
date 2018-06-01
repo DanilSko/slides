@@ -7,7 +7,7 @@
 		<title>RusDraCor: Russian Drama Corpus in TEI</title>
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/black_original.css">
+		<link rel="stylesheet" href="reveal/css/theme/black_original.css"> <!--white -->
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
@@ -15,6 +15,17 @@
 .highlight { 
     color: orange;
 }
+
+.borderedimg { 
+    background: rgba(255, 255, 255, 0.12); 
+    border: 4px solid #eeeeee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) 
+}
+
+.reveal section img { background:none; border:none; box-shadow:none; }
+
+
+
 </style>
 		<!-- Printing and PDF exports -->
 		<script>
@@ -32,416 +43,294 @@
 					<section>
 						<h2><a href="https://rus.dracor.org">RUSDRACOR</a></h2>
 						<h3>A CORPUS FOR THE QUANTITATIVE RESEARCH OF RUSSIAN DRAMA</h3>
+						<img data-src="Pictures/logo_hse_en.png" height = "100" style="vertical-align:bottom ">
+						<p class="fragment fade-up" style="text-align: right; font-size:45%"> <b>Daniil Skorinkin</b>, Frank Fischer, German Palchikov</p>
 					</section>
 				</section>
 				
 				<section>
 					<section>
-						<h3>Эту презентацию лучше не листать стрелочками</h3>
-						<p>Вперед <span color="blue">ПРОБЕЛОМ</span>, назад — ШИФТ+ПРОБЕЛОМ</p>
-					</section>
-				</section>
-				
-				<section>
-					<section>
-						<h3>Что сейчас будет</h3>
-						<ol>
-							<li>Что за сети? Что за анализ? Небольшое введение</li>
-							<li>Что можно превратить в сеть и исследовать как сеть?</li>
-							<li>Те самые «шесть рукопожатий»: сети (графы) в реальном мире</li>
-							<li>Пушкин на посылках: сети в гуманитарных науках</li>
-							<li>Как это делать: начнем  разговор о технологиях </li>
-						</ol>
-					</section> 
-				</section>
-				<section>
-					<section>
-						<h1>Что за сети?</h1>
-					</section>
-					<section>
-						<h3>Сеть (граф)</h3>
-						<img data-src="Pictures/network.png">
-					</section>
-					<section>
-						<h3>состоит из узлов...</h3>
-						<img data-src="Pictures/networknodes.png">
-					</section>
-					<section>
-						<h3>...и ребер</h3>
-						<img data-src="Pictures/networkedges.png">
-					</section>
-					<section>
-						<h4>Что можно представить в виде сети?</h4>
-						<img data-src="Pictures/network.png">
-					</section>
-					<section>
-						<h3>Да все что угодно</h3>
-						<img data-src="Pictures/networks.png">
-					</section>
-					<section>
-						<h3>Включая резульататы извлечения информации</h3>
-						<img data-src="Pictures/infonetworks.png">
-					</section>
-					<section>
-						<h3>А еще если посмотреть сверху, это похоже на</h3>
-						<img data-src="Pictures/network.png">
-					</section>
-					<section>
-						<h3>Острова и мосты между ними</h3>
-						<img data-src="Pictures/konigbridges.png">
-					</section>
-					<section>
-						<h3>Задача о мостах Кёнигсберга</h3>
-						<img data-src="Pictures/konigbridges1.png" height = "400">
-					</section>
-					<section>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/4DzIEUOnSmo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</section>
-					<section>
-						<h3>Так появилась теория графов</h3>
-						<img data-src="Pictures/konigbridges2.png">
-					</section>
-					<section>
-						<h3>Транспортные сети</h3>
-						<img data-src="Pictures/transport.png">
-					</section>
-					<section>
-						<h3>Направленный граф</h3>
-						<img data-src="Pictures/dirnetwork.png">
-					</section>
-					<section>
-						<h3>А вот еще один транспортный граф (сеть)</h3>
-						<img data-src="Pictures/mosmetro.png">
-					</section>
-					<section>
-						<h4>Кстати, откуда он знает, сколько мне ехать?</h4>
-						<img data-src="Pictures/yandexmetropath.png" height="500">
-					</section>
-					<section>
-						<h3>Взвешенные графы</h3>
-						<img data-src="Pictures/wieghtnetwork.png">
-					</section>
-					<section>
-						<h3>Интернет — по определению сеть</h3>
-						<img data-src="Pictures/web.png">
-					</section>
-					<section>
-						<h3>Wikipedia тоже</h3>
-						<img data-src="Pictures/wiki.png">
-					</section>
-					<section>
-						<h3>Кстати</h3>
-						<h4>Данные из Википедии можно вытаскивать через DBpedia или Wikidata (с помощью SPARQL)</h4>
-						<img data-src="Pictures/ext.png">
-						<!--<img data-src="Pictures/db.png">
-						<img data-src="Pictures/sparql.png"> -->
-					</section>
-					<section>
-						<h3>...и конечно, социальные сети</h3>
-						<img data-src="Pictures/vk.png">
-					</section>
-					<section>
-					<h2>Попробуем <a href="https://www.yasiv.com/vk">живьем!</a></h2>
-					</section>
-					
-				</section>
-				<section>
-					<section>
-							<h2>Но вообще-то это настоящая наука</h2>
-					</section>
-					<section data-background-image="Pictures/sociogram.jpg">
-						<!--<h2>a few words about studying human networks</h2>-->
-					</section>
-					<section>
-							<h3>Анализ социальных сетей</h3>
-							<p>Начало в 1930-е: Курт Левин, Джейкоб (Якоб) Морено</p>
-							<img data-src="Pictures/moreno.png" height="350">
-							<img data-src="Pictures/moreno2.png" height="350"> <!--aling="centre"--> 
-							<p>
-							<a href="http://www.martingrandjean.ch/social-network-analysis-visualization-morenos-sociograms-revisited/">обновленная версия на сайте Мартина Гражана (Martin Grandjean)</a>
-							</p>				
-					</section>
-					<section>
-							<h3>Анализ социальных сетей</h3>
-						<p>Манчестерская школа антропологии (Макс Глакман и другие) в 1950-е</p>
-						<img data-src="Pictures/tribalnetwork.png">
-					</section>
-					<section>
-							<h3>Анализ социальных сетей</h3>
-	
-						<p>Гарвардский прорыв ('Harvard Breakthrough') в 1960-е (Харрисон Уайт и другие)</p>
-						<img data-src="Pictures/harvard.gif">
-
-					</section>
-					<section>
-							<h3>Те самые шесть рукопожатий</h3>
-						<img data-src="Pictures/sixdegrees2.png" height="400">
-					</section>
-					<section>
-							<h3>Это придумал Стэнли Милгрэм</h3>
-						<img data-src="Pictures/milgram.png">
-					</section>
-					<section>
-							<h3>Small World Experiment</h3>
-						<img data-src="Pictures/smallworld.gif">
-					</section>
-					<section>
-							<h3>Small World Experiment</h3>
-						<img data-src="Pictures/sixdegrees.png">
+					<h3>Short link to THIS presentation</h3>
+					<p style="font-size:300%"><a href="https://goo.gl/TbMFAH">goo.gl/TbMFAH</a></p>
 					</section>
 				</section>
 				<section>
 					<section>
-					<h2>Сетевой анализв гуманитарных науках</h2>
-					</section>
-					<section>
-					<h3>Кто кого знал в Британии 500 лет назад?</h3>
+					<h2>Who we are</h2>
 						<ul>
-						<li>Проект Six Degrees of Francis Bacon (шесть рукопожатий Фрэнсиса Бэкона)</li>
-						<li>Более 13.000 человек, более 200.000 связей</li>
-						<li>Извлечено из Oxford Dictionary of National Biography</li>
-						<li><a href="http://www.sixdegreesoffrancisbacon.com/">sixdegreesoffrancisbacon.com</a></li>
+						<li>Centre for Digital Humanities at HSE University: <a href="https://hum.hse.ru/digital/">hum.hse.ru/digital</a></li>
+						<li>Junior research group (Научно-учебная группа) on Digital Literary Studies:  <a href="https://hum.hse.ru/digital/rusdracor/">hum.hse.ru/digital/rusdracor</a></li>
 						</ul>
 					</section>
+				</section>
+				<section>
 					<section>
-							<h3>People of Medieval Scotland</h3>
-						<img data-src="Pictures/scotland.png" height="450">
-						<p><a href="http://www.poms.ac.uk/">poms.ac.uk</a></p>
+						<h2>What we do</h2>
+						<h3><a href="https://rus.dracor.org">rus.dracor.org</a></h3>
 					</section>
 					<section>
-							<h3>RusDraCor</h3>
-						<img data-src="Pictures/rusrdacor.png" height="450">
-						<p><a href="https://rus.dracor.org">rus.dracor.org</a></p>
-					</section>
-					<section>
-							<h3>(Shiny RusDraCor)</h3>
-						<img data-src="Pictures/shiny.png" height="450">
-						<p><a href="https://shiny.dracor.org/">shiny.dracor.org</a></p>
-					</section>
-					<section data-background-image="Pictures/why.png" data-background-size="contain">
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<h2 class="fragment fade-up" style="color:black; position: absolute; bottom: 5px; left: 400px;">Но... зачем?</h2>
-					</section>
-					<section>
-							<h4>Наглядность + математическая строгость (#WinningCombo!)</h4>
-						<img data-src="Pictures/centrality.png" height="400">
-						
-					</section>
-					<section>
-							<h4>Это называется степень узла</h4>
-						<img data-src="Pictures/centrality.png" height="400" >
-						<p>Степень A = 5</p>
-					</section>
-					<section>
-							<h4>А здесь что можно сказать?</h4>
-						<img data-src="Pictures/betweenness.png" >
-					</section>
-					<section>
-							<h4>Это называется betweenness centrality (центральность по посредничеству / нагрузка)</h4>
-						<img data-src="Pictures/betweenness.png" >
-					</section>
-					<!--<section>
-							<h4>Живой пример</h4>
-						<img data-src="Pictures/betweenness2.png" >
-					</section> -->
-					<section>
-					<h3>Сетевой анализ позволяет нам</h3>
+					<h2>Objective</h2>
 					<ul>
-					<li>Вычислять значимость отдельных узлов по разным критериям центральность</li>
-					<li>Анализировать пути
-						<ul>
-						<li>распространения информации</li>
-						<li>передачи болезней</li>
-						<li>транспортировки ресурсов </li>
+						<li>grow and maintain a corpus of Russian-language drama from around 1740 to around 1940</li>
+						<li>Main goal: a large-scale social network analysis of literary (dramatic) texts</li>
+						<li>... and other types of formal quantitative analysis of drama </li>
+						<!-- <li>Why: "Distant Reading", a new perspective on literary history</li> -->
 						</ul>
-					</li>
-					<li>А еще — извлекать сообщества</li>
-					</ul>
-					</section>
-					<section>
-					<h3>Извлечение сообществ: Karate Club</h3>
-						<img data-src="Pictures/karate1.png" height = "550">
-					</section>
-					<section>
-					<h3>Извлечение сообществ: Karate Club</h3>
-					<ul>
-					<li>Антрополог Уэйн Зэкэри (Wayne Zachary) изучал небольшой карате-клуб с 1970 по 1972</li>
-					<li>Он записывал неформальные связи между участниками за пределами клуба</li>
-					<li>Во время исследования случился конфликт между руководством и инструктором </li>
-					</ul>
-					<!-- During the study a conflict arose between the administrator "John A" and instructor "Mr. Hi" (pseudonyms), which led to the split of the club into two.-->
-					</section>
-					<section>
-						<h3>Извлечение сообществ: Karate Club</h3>
-						<ul>
-						<li>Половина участников ушла вместе с инструктором делать новый клуб</li>
-						<li>Вторая половина осталась (или совсем бросила карате)</li>
-						<li>Зэкэри написал программу, которая на основе собранных до раскола данных пытается предугадать границы раскола группы</li>
-						<li><a href="http://www1.ind.ku.dk/complexLearning/zachary1977.pdf">Ссылка на статью Зэкэри (1977)</a></li>
-						</ul>
-					</section>
-					<!--
-					<section>
-						<h3>Извлечение сообществ: Karate Club</h3>
-					<q>The process leading to fission is viewed as an unequal flow of sentiments and information across the ties in a social network. This flow is unequal because it is uniquely constrained by the contextual range and sensitivity of each relationship in the network. The subsequent differential sharing of sentiments leads to the formation of subgroups with more internal stability than the group as a whole, and results in fission</q>
-					</section>
-					-->
-					<section>
-					<h3>Матрица (таблица) связей -- исходные данные</h3>
-						<img data-src="Pictures/karatematrix.png" height="500">
-					</section>
-					<section>
-					<h3>Сеть этих связей</h3>
-						<img data-src="Pictures/karateviz.png" height="500">
-					</section>
-					<section>
-					<h3>Моя визуализация Karate Club</h3>
-						<img data-src="Pictures/karate2.png" >
-					</section>
-					<section>
-					<h3>Karate Club Club</h3>
-					<p>Шуточное сообщество, куда принимают каждый год первого человека, упомянувшего Karate club на научной конференции по сетевому анализу</p>
 					</section>
 				</section>
 				<section>
 					<section>
-					<h1>Сети в вымышленных мирах</h1>
+						<h2>Network analysis of literature</h2>
+						<h3>is it a thing?</h3>
 					</section>
 					<section>
-					<h3>...не ограничиваются литературой!</h3>
-						<img data-src="Pictures/starwars.png" >
-					</section>
-					<section>
-					<h3>Предыстория</h3>
+					<h3>One of the first computable literary networks</h3>
 					<p>Donald Knuth. <a href="https://people.sc.fsu.edu/~jburkardt/datasets/sgb/sgb.html">Stanford GraphBase (1994) </a></p>
 						<img data-src="Pictures/knuth.png" height="420">
 					</section>
 					<section>
-					<h3>Предыстория</h3>
+					<h3>Simple Stories</h3>
 					<p>Schweizer T., Schnegg M. Die soziale Struktur der. „Simple Storys“: Eine Netzwerkanalyse. (1998)</p>
 						<img data-src="Pictures/simplestories.png" height="420">
 					</section>
 					<section>
-					<h3>Что показал сетевой анализ вселенной Marvel?</h3>
-					<li>Alberich, R., Miro-Julia, J., Rossello, F. (2002), Marvel universe looks almost like a real social network. </li>
-					<li>P. M. Gleiser. How to become a superhero. Journal of Statistical Mechanics: Theory and Experiment, (09):P09020, 2007.</li>
-					</section>
-
-					<section data-background-image="Pictures/captainamerica.png" data-background-size="contain">
-					<h3>Что вселенная Marvel вращается вокруг Капитана Америки</h3>
-					</section>
-					<section>
-					<h1>Но это же банально!</h1>
-					</section>
-					<section>
-					<h4>А еще, возможно, вскрыло стратегию продвижения супергероев</h4>
+					<h3>The Marvel Universe</h3>
+					<h4>First large-scale research</h4>
 					<img data-src="Pictures/superheroes.png" >
 					</section>
 					<section>
-					<h3>Гордость и предубеждение, Алиса и кролик, Ромео и Джульетта…</h3>
-					<ul style="font-size:65%">
-					<li>James Stiller, Daniel Nettle, and Robin I. M. Dunbar (2003) The Small World of Shakespeare’s Plays.Human Nature 14(4):397---408. </li>
-<li>“Weak Links and Scene Cliques Within the Small World of Shakespeare,” Journal of Cultural and Evolutionary Psychology 3, no. 1 (2005) </li>
-<li>Elson, D. K., Dames, N. and McKeown, K. (2010), Extracting Social Networks from Literary Fiction, Proceedings of ACL 2010, Uppsala, Sweden. </li>
-<li>J. Rydberg-Cox. Social Networks and the Language of Greek Tragedy. Journal of the Chicago Colloquium on Digital Humanities and Computer Science, 1(3):11, 2011.</li>
-<li>Agarwal A., Corvalan A., Jensen J., Rambow O. (2012), Social network analysis of Alice in Wonderland. Proceedings of the NAACL HLT 2012 Workshop on Computational Linguistics for Literature, pages 88–96, Montreal, Canada.</li>
+					<h3>The Marvel Universe</h3>
+					<li>Alberich, R., Miro-Julia, J., Rossello, F. (2002), Marvel universe looks almost like a real social network. </li>
+					<li>P. M. Gleiser. How to become a superhero. Journal of Statistical Mechanics: Theory and Experiment, (09):P09020, 2007.</li>
+					</section>
+					<!--<section>
+					 <h3>Alice in Wonderland</h3>
+					<img data-src="Pictures/Alice.png" >
+					</section> -->
+					<section>
+					<h3>..and many others followed</h3>
+					<ul style="font-size:75%">
+						<li>James Stiller, Daniel Nettle, and Robin I. M. Dunbar (2003) The Small World of Shakespeare’s Plays.Human Nature 14(4):397---408. </li>
+						<li>“Weak Links and Scene Cliques Within the Small World of Shakespeare,” Journal of Cultural and Evolutionary Psychology 3, no. 1 (2005) </li>
+						<li>Elson, D. K., Dames, N. and McKeown, K. (2010), Extracting Social Networks from Literary Fiction, Proceedings of ACL 2010, Uppsala, Sweden. </li>
+						<li>J. Rydberg-Cox. Social Networks and the Language of Greek Tragedy. Journal of the Chicago Colloquium on Digital Humanities and Computer Science, 1(3):11, 2011.</li>
+						<li>Agarwal A., Corvalan A., Jensen J., Rambow O. (2012), Social network analysis of Alice in Wonderland. Proceedings of the NAACL HLT 2012 Workshop on Computational Linguistics for Literature, pages 88–96, Montreal, Canada.</li>
 					</ul>
 					</section>
 					<section>
-					<h3>Алиса в стране чудес</h3>
-					<img data-src="Pictures/Alice.png" >
+						<h3>'Reinvention' of Literary Networks by Moretti</h3>
+						<q>Though Horatio is an old fixation of mine, I had never fully understood his role in Hamlet until I looked at the play’s network structure. </q>
+						Franco Moretti. “Distant Reading”
+					</section>
+					<section>
+						<h3>'Reinvention' of Literary Networks by Moretti</h3>
+						<img data-src="Pictures/hamlet.png" >
+					</section>
+					<!-- <section>
+						<h3>'Reinvention' of Literary Networks by Moretti</h3>
+						<q>[Networks] make visible specific ‘regions’ within the plot as a whole <...>. Take the characters who are connected to both Claudius and Hamlet <...>: except for Osric and Horatio, whose link to Claudius is however extremely tenuous, they are all killed <...>; what is truly deadly, is the characters’ position in the network, chained to the warring poles of king and prince. Outside of that bold region, no one dies in Hamlet. The tragedy is all there”.</q>
+						Franco Moretti. “Distant Reading”
+					</section> -->
+				</section>
+				<section>
+					<section>
+					<q>
+					“Networks are made of vertices and edges; plot networks, of characters and verbal exchanges. In plays this works well, because words are deeds, deeds are almost always words, and so, basically, a network of speech acts is a network of actions”.  </q>
+					Franco Moretti. “Distant Reading”
+					</section>
+					<section>
+					<h2>But How to Make These Actions (and Networks) Machine-Readable?</h2>
+						<img style="background: rgba(255, 255, 255, 0.12);border: 4px solid #eeeeee;box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) " data-src="Pictures/teilogo.svg" height = "200" >
+					<h2 id="text-encoding-initiative">Text Encoding Initiative</h2>
 					</section>
 					
-					<section>
-						<h4>«Переоткрытие» сетевого анализа в художественном тексте</h4>
-						<img data-src="Pictures/hamlet.png" height ="450" >
-						<p style="font-size:65%">Франко Моретти, «Теория сетей и анализ сюжета» (2011/2009)</p>
-					</section>
-					
-					<section>
-						<h3>Масштабирование</h3>
-						<img data-src="Pictures/germansuperposter.png" >
-					</section>
-					<section>
-						<h3>Можно смотреть динамику формальных метрик сети</h3>
-						<h4>Например, плотность</h4>
-						<img data-src="Pictures/dense.png" height="450"><img data-src="Pictures/lessdense.png" height="450">
-					</section>
-					<section>
-						<h3>Плотности комедии и трагедии отличаются</h3>
-						<img data-src="Pictures/density.png" >
-					</section>
-					<section>
-						<h3>А теперь — к русскому материалу!</h3>
-						<img data-src="Pictures/superposter.svg" >
-					</section>
-					<section>
-						<h3>Классицизм против романтизма</h3>
-						<h4>(<a href="https://dracor.org/rus">rus.dracor.org</a>)</h4>
-						<img data-src="Pictures/sumarokov.png" height="420">
-						<img data-src="Pictures/godunov.png" height="420">
-					</section>
-					<section>
-						<h3>Важный ли герой Гаврила Пушкин?</h3>
-						<img data-src="Pictures/gavrila1.png" >
-					</section>
-					<section>
-						<h3>Пушкин на посылках и betweenness centrality</h3>
-						<img data-src="Pictures/gavrila2.png" >
-					</section>
-					<section>
-						<h3>Битяговский (двойной агент)</h3>
-						<img data-src="Pictures/bityag.png" >
-					</section>
-					<section>
-						<h3>Битков (соглядатай/двойник Пушкина)</h3>
-						<img data-src="Pictures/bitkov.png" >
+					<section data-markdown="" data-markdown-parsed="true" class="future" style="top: 21.5px; display: none;" hidden="" aria-hidden="true"><h3 id="extract-from-tei-encoded-play">Extract from TEI-Encoded Play</h3>
+					<p><br></p>
+					<pre><code class="lang-xml hljs">(…)
+<span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">front</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">docTitle</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">titlePart</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"main"</span>&gt;</span>Борис Годунов<span class="hljs-tag">&lt;/<span class="hljs-name">titlePart</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">docTitle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"dedication"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Драгоценной для россиян памяти Николая Михайловича
+	 Карамзина сей труд, гением его вдохновенный, с
+	 благоговением и благодарностию посвящает<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Александр Пушкин<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">front</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"scene"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>КРЕМЛЕВСКИЕ ПАЛАТЫ<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>(1598 года, 20 февраля)<span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>Князья Шуйский и Воротынский. <span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">sp</span> <span class="hljs-attr">who</span>=<span class="hljs-string">"#vorotynskij"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">speaker</span>&gt;</span>Воротынский<span class="hljs-tag">&lt;/<span class="hljs-name">speaker</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Наряжены мы вместе город ведать,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Но, кажется, нам не за кем смотреть:<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Москва пуста; вослед за патриархом<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>К монастырю пошел и весь народ.<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Как думаешь, чем кончится тревога?<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">sp</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">sp</span> <span class="hljs-attr">who</span>=<span class="hljs-string">"#shujskij"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">speaker</span>&gt;</span>Шуйский<span class="hljs-tag">&lt;/<span class="hljs-name">speaker</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Чем кончится? Узнать немудрено:<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Народ еще повоет да поплачет,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Борис еще поморщится немного,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Что пьяница пред чаркою вина,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>И наконец по милости своей<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Принять венец смиренно согласится,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>А там — а там он будет нами править<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span> <span class="hljs-attr">part</span>=<span class="hljs-string">"I"</span>&gt;</span>По-прежнему.<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">sp</span>&gt;</span>
+(…)
+					</code></pre>
+					<p><small>(TEI-encoded drama has <code>&lt;sp&gt;</code> and <code>&lt;speaker&gt;</code> tags and machine-readable act/scene segmentation.)</small></p>
+					</section><section data-markdown="" data-markdown-parsed="true" class="future" style="top: 180.5px; display: none;" hidden="" aria-hidden="true"><h2 id="operationalisation">Operationalisation</h2>
+					<p><br></p>
+					<ul>
+					<li>network data = <strong>interactions</strong> between characters</li>
+					<li>"Two characters interact with one another if they perform a speech act within the same segment of a drama (usually a 'scene')." (following an idea of Solomon Marcus, "Poetica matematică", 1970)</li>
+					</ul>
+					</section><section data-markdown="" data-markdown-parsed="true" class="future" style="top: 156px; display: none;" aria-hidden="true" hidden=""><h2 id="drama-corpora-in-tei">Drama Corpora in TEI</h2>
+					<p>(facilitating the automated extraction of network data)</p>
+					<ul style = "font-size:80%">
+					<li><a href="http://www.theatre-classique.fr/">Théâtre Classique</a>: 1090 plays from the 17th and 18th century</li>
+					<li><a href="https://drama.earlyprint.org/">Shakespeare His Contemporaries</a>: 860 plays written between 1550 and 1700</li>
+					<li><a href="https://ger.dracor.org/">German Drama Corpus</a>: 466 German-language plays from 1730 till 1930</li>
+					<li><a href="http://www.bibliotecaitaliana.it/">Letteratura teatrale nella Biblioteca italiana</a>: 171 Italian plays</li>
+					<li><a href="https://rus.dracor.org/">Russian Drama Corpus</a>: 90 Russian-language plays from 1740s till 1940s</li>
+					<li><a href="http://www.dramawebben.se/">Dramawebben</a>: 62 Swedish plays</li>
+					</ul>
 					</section>
 				</section>
 				<section>
 					<section>
-				<h3>Gephi (gephi.org)</h3>
-				<ul>
-				<li>Простой инструмент для анализа сетей (не надо уметь программировать)</li>
-<li>"like Photoshop but for graph data" (gephi.org)</li>
-<li>Открытый и бесплатный</li>
-<li>Написан на Java и работает на всех основных ОС</li>
-<li>Расширяемый (можно создавать плагины)</li>
-<li>…немного глючный : )</li>
-				</ul>
+						<h3>German Corpus: 465 plays</h3>
+						<h4></h4>
+						<img data-src="Pictures/germansuperposter.png" >
 					</section>
 					<section>
-						<h3>CSV — cамый простой формат кодирования сетей</h3>
-						<ol>
-						<li>Даня, Маша, 1</li>
-						<li>Вася, Петя, 3</li>
-						<li>...</li>
-						</ol>
+						<h3>Densities of German plays</h3>
+						<img data-src="Pictures/density.png" >
 					</section>
 					<section>
-						<p> <a href="https://ezlinavis.dracor.org/">Ezlinavis</a></p>
+						<h3>And now on Russian data!</h3>
+						<img data-src="Pictures/superposter.svg" >
 					</section>
-					<section> 
-					<p style="font-size:300%"><a href="https://goo.gl/oX3VDj">goo.gl/oX3VDj</a></p>
+					<section>
+					<h3>Mean Density in Russian Drama </h3>
+					<h4>by Genre</h4>
+						<img data-src="Pictures/meandenrusdracor.png" >
 					</section>
+					<section>
+					<h3>Densities / Years scatterplot </h3>
+					<h4>Colored by Genre</h4>
+						<img data-src="Pictures/densities_explained.png" >
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Classicism vs 'Shakespearean plays' in Russian Corpus </h3>
+						<img data-src="Pictures/sumarokov.png" height="420">
+						<img data-src="Pictures/godunov.png" height="420">
+					</section>
+					<section>
+						<h2>Which plays have small world property?</h2>
+					</section>
+					<section>
+						<h3>Gavrila Pushkin — is he important?</h3>
+						<img data-src="Pictures/pictures_cameraready/figure 13 godunovWDegree2.png" >
+					</section>
+					<section>
+						<h3>Gavrila the messenger</h3>
+						<img data-src="Pictures/pictures_cameraready/figure 14 godunovBetweenness2.png" >
+					</section>
+					<section>
+						<h3>Bityagovsky (double agent)</h3>
+						<img data-src="Pictures/bityag.png" >
+					</section>
+					<section>
+						<h3>Bitkov (spy on Pushkin)</h3>
+						<img data-src="Pictures/bitkov.png" >
+					</section>
+					<section>
+							<h4>Shiny RusDraCor for Online Network Analysis</h4>
+						<img data-src="Pictures/shiny.png" height="450">
+						<p><a href="https://shiny.dracor.org/">shiny.dracor.org</a></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Evolution of stage directions </h3>
+						<h5>Эволюция сценических ремарок и эпосизация драмы</h5>
+						<q>Stage directions, quite literally, don’t count.</q>
+						<p>Eric Rasmussen</p>
+					</section>
+					<section>
+						<h2>Example of Stage Directions</h2>
+						<pre><code class="xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>Слуги уходят.<span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>(Подходит к столу; ему дают место.)<span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>Грохот, взрыв, выстрел. Победоносиков распахивает дверь и бросается в квартиру. На нижней площадке фейерверочный огонь. На месте поставленного аппарата светящаяся женщина со свитком в светящихся буквах. Горит слово "Мандат". Общее остолбенение. Выскакивает Оптимистенко, на ходу подтягивает брюки, в ночных туфлях на босы ноги, вооружен. <span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
+						</code>
+						</pre>
+					</section>
+					<section>
+							<h3>Length of stage directions</h3>
+							<img data-src="Pictures/pictures_cameraready/figure 1 Total length of stage directions.png" >
+					</section>
+					<section>
+							<h3>Share of stage directions</h3>
+							<img data-src="Pictures/pictures_cameraready/figure 3 Stage directions ratio in plays.png" >
+					</section>
+					<section>
+							<h3>Verb usage in stage directions</h3>
+							<img data-src="Pictures/pictures_cameraready/figure 4 Verbs share in stages.png" >
+					</section>
+					<section>
+							<h3>Unique verbs in stage directions</h3>
+							<img data-src="Pictures/pictures_cameraready/figure 5 Unique verbs in stage directions.png" >
+					</section>
+					<section>
+							<h3>Parts of Speech</h3>
+							<img data-src="Pictures/pictures_cameraready/pos_dasha.png"  height = "450">
+							<p>(by Dasha Maximova)</p>
+					</section>
+				</section>
+				<section>
+						<h3>FICTIONAL GENDER LANGUAGE STUDIES</h3>
+						<img data-src="Pictures/pictures_cameraready/figure 6 WomenVSmen_Craig_001.png" height="750">
+					</section>
+				<section>
+					<section>
+						<H2>FEEL FREE TO COME AND HELP</H2>
+						<a href="https://github.com/dracor-org/rusdracor">github.com/dracor-org/rusdracor</a>
+					</section>
+					
 					<section> 
 					<img data-src="Pictures/lastpic.png" height="500">
 					</section>
-					
-					
 				</section>
-				<!--<section>
-				<h2>Now — hands on with Gephi!</h2>
-				<a href="https://slides.com/danilsko/gephi">slides.com/danilsko/gephi</a>
-				</section> -->
+					<!--	
+				<section>
+					<h2>Pretty Code</h2>
+					<pre><code class="xml">
+			<span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>(1598 года, 20 февраля)<span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
+					</code>
+					</pre>
+				</section>
+				
+				
+				<section>
+						<h2>What we do</h2>
+						<ul style="font-size:170%">
+						<li><a href="https://rus.dracor.org">rus.dracor.org</a></li>
+						<li class="fragment fade-up"><a href="https://github.com/dracor-org/rusdracor">github.com/dracor-org/rusdracor</a></li>
+						</ul>
+				</section>
+				-->
 			</div>
 		</div>
 
