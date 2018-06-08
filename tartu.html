@@ -96,8 +96,8 @@
 					<section>
 					<h2>Objective</h2> <!-- Objective-->
 					<ul>
-						<li>grow and maintain a corpus of Russian-language drama from around 1740 to around 1940</li>
-						<li>Goal: large-scale diachronic analysis of literary (dramatic) texts
+						<li>grow and maintain an annotated corpus of Russian-language drama from around 1740 to around 1940</li>
+						<li>Main goal: large-scale diachronic analysis of literary (dramatic) texts
 						<ol>
 							<li>Social Network Analysis </li>
 							<li>...and other types of formal quantitative analyses</li>
@@ -109,7 +109,7 @@
 					</section>
 					<section>
 						<!-- <h2>What we do</h2> -->
-						<h1><a href="https://rus.dracor.org">rus.dracor.org</a></h1>
+						<h1><a target="_blank" href="https://rus.dracor.org">rus.dracor.org</a></h1>
 					</section>
 				</section>
 				<section>
@@ -117,7 +117,7 @@
 						<h1>Part I: Networks</h1>
 					</section>
 					<section>
-						<h2>Network analysis of literature</h2>
+						<h2>So, Network analysis of literature</h2>
 						<h3>is it a thing?</h3>
 					</section>
 					
@@ -255,7 +255,7 @@ Scene 1</p>
 				<section>
 					<section>
 						<h2>90 plays in our corpus:</h3>
-						<img data-src="Pictures/superposter.svg" >
+						<img data-src="Pictures/russian-superposter.jpg" > <!--superposter.svg-->
 					</section> 
 					<section>
 						<h2>Network Size (Number of Speakers)</h3>
@@ -369,6 +369,10 @@ Download in full-res (28.88 MB) via Figshare. DOI: <a href="https://dx.doi.org/1
 						<h3>And now on Russian data</h3>
 						<img data-src="Pictures/ComedyVsNonComedy.png" >
 					</section>
+					<section>
+						<h3>Russian data (local regressions)</h3>
+						<img data-src="Pictures/comedy_non_comedy_loess.png" >
+					</section>
 					<!--<section>
 					<h3>Mean Density in Russian Drama </h3>
 					<h4>by Genre</h4>
@@ -405,13 +409,13 @@ Download in full-res (28.88 MB) via Figshare. DOI: <a href="https://dx.doi.org/1
 						<img data-src="Pictures/goethe.png" >
 					</section>
 					<section>
-						<h3>Classicism vs 'Shakespearean plays' in Russian Corpus </h3>
-						<img data-src="Pictures/sumarokov.png" height="420">
-						<img data-src="Pictures/godunov.png" height="500">
+						<h3>Classicism vs'Shakespearean play' in Russian Corpus </h3>
+						<img data-src="Pictures/sumarokov.png" height="500">
+						<img data-src="Pictures/godunov.png" height="530">
 					</section>
 					<section>
 						<h3>In such plays, we can even try network-driven classification of characters</h3>
-						<img data-src="Pictures/betweenness-pushkin-boris-godunov.png" height="500">
+						<img data-src="Pictures/betweenness-pushkin-boris-godunov.png" height="450">
 					</section>
 					<section>
 						<h3>Gavrila Pushkin — is he important?</h3>
@@ -459,8 +463,8 @@ Download in full-res (28.88 MB) via Figshare. DOI: <a href="https://dx.doi.org/1
 						</pre>
 					</section>
 					<section>
-						<q>Stage directions, quite literally, don’t count.</q>
-						<p>Eric Rasmussen</p>
+						<q>Stage directions, quite literally, don’t count [...] convention dictates that stage directions be linked to the previous line of dialogue and that each line of the stage direction receive a decimal point, for example, 37.1. Numerically, at least, a stage direction is worth exactly one tenth as much as a line of dialogue</q>
+						<p style="font-size:50%">Eric Rasmussen: Afterword. In: Hardin L. Aasand (ed.): Stage Directions in Hamlet. New essays and new directions. Madison et al. 2003, p. 226.</p>
 					</section>
 					<section>
 						<h2>Example of Stage Directions</h2>
@@ -470,6 +474,9 @@ Download in full-res (28.88 MB) via Figshare. DOI: <a href="https://dx.doi.org/1
 <span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>Грохот, взрыв, выстрел. Победоносиков распахивает дверь и бросается в квартиру. На нижней площадке фейерверочный огонь. На месте поставленного аппарата светящаяся женщина со свитком в светящихся буквах. Горит слово "Мандат". Общее остолбенение. Выскакивает Оптимистенко, на ходу подтягивает брюки, в ночных туфлях на босы ноги, вооружен. <span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
 						</code>
 						</pre>
+					</section>
+					<section>
+						<h3>Seems like this 'epification' trait is quantifiable</h3>
 					</section>
 					<section>
 							<h3>Total length of stage directions</h3>
@@ -494,11 +501,12 @@ Download in full-res (28.88 MB) via Figshare. DOI: <a href="https://dx.doi.org/1
 					<section>
 							<h3>Parts of Speech</h3>
 							<img data-src="Pictures/pictures_cameraready/pos_dasha.png"  height = "450">
-							<p>(by Dasha Maximova)</p>
+							<!-- <p>(by Dasha Maximova)</p> -->
 					</section>
 				</section>
+				<section>
 					<section>
-						<h4>Further work: gender relations & roles</h4>
+						<h4>Further work: gender proportions, language & roles</h4>
 						
 						<pre><code class="xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">person</span> <span class="hljs-attr">xml:id</span>="ZhenaLukiLukicha" <span class="hljs-attr">sex</span>="FEMALE"&gt;</span>
@@ -521,23 +529,27 @@ Download in full-res (28.88 MB) via Figshare. DOI: <a href="https://dx.doi.org/1
 					</pre>
           
           </section>
-       </section>
-       <section>
-			<section>
-						<h3>Further work: gender relations & roles</h3>
-						<img data-src="Pictures/pictures_cameraready/figure 6 WomenVSmen_Craig_001.png" height="750">
-					</section>
-			<section>
+       
+				<section>
+					<h3>Further work: gender proportions, language & roles</h3>
+					<img data-src="Pictures/russian_drama_speech_acts_by_gender.jpg" >
+				</section>
+				<section>
+					<h3>Further work: gender proportions, language & roles</h3>
+					<img data-src="Pictures/pictures_cameraready/figure 6 WomenVSmen_Craig_001.png" height="700">
+				</section>
+		<section>
 					
 					<section>
-						<H2>FEEL FREE TO COME AND HELP</H2>
-						<a href="https://github.com/dracor-org/rusdracor">github.com/dracor-org/rusdracor</a>
+						<H2>Thank you for your attention!</H2>
+						
+						<p style="font-size:120%"><a href="https://github.com/dracor-org/rusdracor">github.com/dracor-org/rusdracor</a></p>
 					</section>
 					
 					<!-- <section> 
 					<img data-src="Pictures/lastpic.png" height="500">
 					</section> -->
-				</section>
+		</section>
 					<!--	
 				<section>
 					<h2>Pretty Code</h2>
