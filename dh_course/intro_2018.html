@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Digital Humanities Crash-Course</h1>
+						<h3>April 19 — 26 </h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Course slides & materials</h1>
+						<h2><a href="https://danilsko.github.io/DHelsinki/">danilsko.github.io/DHelsinki</a></h2>
+						<p class="fragment fade-up"><i>Самая Главная Ссылка</i></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Warning</h1>
+						<p>This presentation is Non-Linear</p>
+						<p>Use <span color="blue">SPACE</span> to go forward, SHIFT+SPACE to go back</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Plan for today</h3>
+						<ol>
+							<li>About me<ul><li>(and about you!)</li></ul></li>
+							<li>About Digital Humanities<!--, and whether you should care--></li>
+							<li>Some history of humanities computing</li>
+							<li>Contemporary DH</li>
+							<li>What <span class="fragment highlight-green">we</span> will learn in this course</li>
+							<li>Some Russian Sweets (to sweeten the bitter roots of knowledge) 🍰 🍬 </li>
+						</ol>
+					</section>
+					<section>
+						<h3>About me</h3>
+						<ul>
+							<li>Full name: Daniil Skorinkin</li>
+							<li>Just call me Danya (DAAnyuh, IPA:'dɑːnjə) or Dan</li>
+							<li>Work at HSE: <a href="https://www.hse.ru/staff/skorinkin">hse.ru/staff/skorinkin</a></li>
+							<li>Computational linguist/NLP specialist by origin</li>
+							<li>'Digital Humanist' by current trade</li>
+							<li><p class="fragment fade-up">...Your turn, please, I am all 👂</p></li>
+						</ul>
+					</section>
+					<section>
+					<h2>and Please fill</h2>
+					<h3><a href="https://tinyurl.com/y95l7ggp">tinyurl.com/y95l7ggp</a></h3>
+					</section>
+					<section>
+					<h3>About Digital Humanities</h3>
+					or …
+
+<li>{fi} Digitaaliset ihmistieteet</li>
+<li>{ru} Цифровые гуманитарные науки</li>
+<li>{fr} Humanités numériques</li>
+<li>{es} Humanidades digitales</li>
+<li>{he} מדעי הרוח הדיגיטליים</li>
+<li>{it} Informatica umanistica</li>
+<li>{de} Digitale Geisteswissenschaften</li>
+
+
+					</section>
+					<section>
+						<h3>What is Digital Humanities?</h3>
+						<p>..is almost a topic of research in itself</p>
+						<p><a href="http://whatisdigitalhumanities.com">whatisdigitalhumanities.com</a> will give you 817 definitions</p>
+					</section>
+					<section>
+					<h3>My favourite definition</h3>
+					<p>Taking tools built by warmongers, spy agencies & investment bankers and using them to study literature, philosophy, culture and the classics <p>(Elijah Meeks, Stanford Digital Scholarship)</p> </p>
+					</section>
+					<section>
+					<h3>So, basically it's</h3>
+					<p>Applying computational methods and some IT to research in the humanities</p>
+					</section>
+					<section>
+					<h3>DH specifics</h3>
+					<ul>
+					
+<li>emphasis on building/crafting</li>
+<li>alternative teaching formats:
+<ul><li>hackathons, workshops, summer/winter/spring schools</li></ul></li>
+<li>virtual research environments</li>
+<li>team work rather than solitary work</li>
+<li>the project as basic unit:
+<ul><li>"a kind of scholarship that requires design, management, negotiation, and collaboration" (Jeffrey Schnapp)</li></ul></li>
+</li>
+<!--<li>social-network platforms not only as research objects, but as environments for collaboration and dissemination</li>-->
+
+
+</ul>
+					</section>
+					<section>
+					<h4>...so, let's hear what Wiki has to say about DH</h4>
+					<p><q>Digital humanities (DH) is an area of scholarly activity at the intersection of computing or digital technologies and the disciplines of the humanities.</q></p>
+					<p><q>Цифровые гуманитарные науки — это область исследований, обучения и созидания, созданная на стыке компьютерных и гуманитарных наук.</q></p>
+					</section>
+					<section>
+					<h3>but enough definitions</h3>
+					<img class="stretch" data-src="Pictures/SayDH.jpg" height="100%">
+					<p><q>
+					Picture source: <a href="http://ryancordell.org/teaching/how-not-to-teach-digital-humanities/">How Not to Teach Digital Humanities</a>
+					</q></p>
+					</section>
+					<section>
+					<h3>Mapping the DH</h3>
+					<img class="stretch" data-src="Pictures/DHmap.png" height="100%">
+					</section>
+				</section>
+				<section>
+					<section data-background="Pictures/BESM_bg.jpeg">
+						<h1>some history</h1>
+					</section>
+					<section>
+						<h3>Two major (intertwined) stories</h3>
+						<ul>
+						<li>Scholars trying to <span class="fragment highlight-green">formalize & calculate</span> stuff in the humanities</li>
+						<li>Scholars applying <span class="fragment highlight-green">computers</span> to these formalisations and calculations</l>
+						</ul>
+					</section>
+					<section>
+						<h3>XIX century</h3>
+						<ul>
+						<img data-src="Pictures/Mendenhall.jpeg" width="340" align="right" vspace="5" hspace="5">
+							<li>1851 — A. De Morgan suggests mean word-length as an authorship feature</li>
+							<li>1887 — T. Mendenhall, 'The Characteristic Curves of Composition' (picture)</li>
+							<li>1890 — W. Lutosławski, 'Principes de stylométrie', establishing the chronology of Plato's Dialogues </li>
+						</ul>
+						
+					</section>
+					<section>
+						<h3>early XX century</h3>
+						<ul>
+						<img data-src="Pictures/Morozov.gif" width="340" align="right" vspace="5" hspace="5">
+							<li>Calculations in Poetry (e.g. Andrei Beliy, 1910)</li>
+							<li>1915 — N. Morozov, 'Linguistic Spectres' (picture)</li>
+							<li>1915-1930 (roughly) — 'Formal Method' in literary studies (Russian Formalism)</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h3>Formalism</h3>
+						<ul>
+						<img data-src="Pictures/Eikhenbaum.jpg" width="340" align="right" vspace="5" hspace="5">
+							<li>V. Shklovsky (1917): literary scholarship has to withstand 'scientific scrutiny'('выдерживать научную критику')</li>
+							<li>B. Eikhenbaum (1925): the need to 'propagate objective/scientific handling of facts' ('пропаганда объективно-научного отношения к фактам') 
+							</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h3>Formalism</h3>
+						<ul>
+						<img data-src="Pictures/Tomash.png" width="500" align="right" vspace="5" hspace="5">
+							<li>B. Tomashevskiy</li>
+							<li>Renowned literary scholar with an electrical engineering degree from Université de Liège</li>
+							<li>Statistics in Poetry, e.g. «Пятистопный ямб Пушкина» (1923) (picture)</li>
+						</ul>
+						
+					</section>
+					
+					<section>
+						<h3>Formalism and around it</h3>
+						<ul>
+						<img data-src="Pictures/Propp.jpg" height="280" align="right" vspace="5" hspace="5">
+							<li>'Formal Folkloristics': V. Propp and his 'Morphology of the Folktale'</li>
+						</ul>
+						
+					</section>
+					
+					<section>
+						<h3>Boris Yarkho (1889 — 1942)</h3>
+						<ul>
+						<img data-src="Pictures/Yarkho.jpg" align="right" vspace="5" hspace="5">
+							<li>Methodology of Exact Literary Studies ('Методология точного литературоведения')</li>
+							<li>Speech Distribution in a 5-act tragedy ('Распределение речи в пятиактной трагедии')</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h3>Actual computing: Roberto Busa (1913 - 2011)</h3>
+						<img data-src="Pictures/Busa.png">
+					</section>
+					<section>
+						<h3>Andrew Morton</h3>
+						<ul>
+						<li>Morton, The Authorship of the Pauline Epistles: A Scientific Solution. Saskatoon, 1965. </li>
+							<li>Highly influential work that clamied only 4 epistles were written by St. Paul himself</li>
+						<img data-src="Pictures/morton.gif" height="300" align="center">
+						
+							
+						</ul>
+						
+					</section>
+					
+					<section>
+						<h3>Structuralism</h3>
+						<ul>
+						<img data-src="Pictures/Barthes.jpeg" width="340" align="right" vspace="5" hspace="5">
+						<li>R. Jakobson as a transitional figure</li>
+							<li>R. Barthes (1967), 'Death of the Author' (ideologically rather similar to formalism)</li>
+							<li>С. Levi-Strauss (influenced by Jakobson, possibly also by Propp), formal analysis of fairytales</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h3>Moscow-Tartu Semiotic School (MTSS)</h3>
+						<ul>
+						<img data-src="Pictures/Tartu.jpeg" width="340" align="right" vspace="5" hspace="5">
+							<li>Yuri Lotman (1967, same as Barthes): 'Literary studies should become a science' (Литературоведение должно быть наукой) </li>
+							<li>O. Revzina and I. Revzin (influenced by Solomon Marcus) </li>
+							<li>Sign Systems Studies ("Труды по знаковым системам") since 1964</li>
+							<li>Poetry studies by M. L. Gasparov ('Semantic halo of a meter') </li>
+						</ul>
+						
+					</section>
+					<section>
+						<h3>Case of MTSS influence: V. Sapogov </h3>
+						<ul>
+							<li>V. Sapogov (1974) Nekotorye harakteristiki dramaturgičeskogo postroeniâ komedii A. N. Ostrovskogo »Les« [Some Characteristics of the Dramatic Construction of A. N. Ostrovsky's Comedy »The Forest«]</li>
+							<li>Quantitative analysis of Ostrovsky's play using simple character dynamics count</li>
+						</ul>
+						
+					</section>
+					<section>
+						<h3>Sapogov's will</h3>
+						<q>'Возможности содержательной интерпретации полученных параметров текста комедии “Лес” многократно увеличатся, если сравнить их с таким же образом описанными другими произведениями Островского и с пьесами его предшественников и современников'</q>
+						
+					</section>
+					<section>
+						<img data-src="Pictures/sapogov.png">
+					</section>
+					<section>
+					<h3>Try it yourself at</h3>
+					<h2><a href="https://dracor.org/rus">rus.dracor.org</a></h2>
+						</section>
+					<section>
+						<h3>Soviet Literary Computing — also in Tartu</h3>
+						<ul>
+						<img data-src="Pictures/Grinbaum1.png" width="340" align="right" vspace="5" hspace="5">
+							<li>Гринбаум О. Н. Структуризация худ. прозы с использованием ЭВМ. 2 : Детализация структурированного текста / О. Н. Гринбаум // Квантитативная лингвистика и автоматический анализ текстов. Тарту, 1989.</li>
+						</ul>
+					</section>
+					<section>
+						<img data-src="Pictures/Grinbaum2.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Digital Humanities Today</h1>
+					</section>
+					<section>
+						<h3>Digital Archeology</h3>
+						<h4>& Digital Preservation</h4>
+						<img data-src="Pictures/Arche.png" align="right" vspace="5" hspace="5">
+					</section>
+					<section>
+						<h3>Virtual Museums</h3>
+						<img data-src="Pictures/Museums.png" align="right" vspace="5" hspace="5">
+					</section>
+					<section>
+						<h3>GIS and the Humanities</h3>
+						<img data-src="Pictures/gis.png">
+					</section>
+					<section>
+						<h3>Digital Editions</h3>
+						<img data-src="Pictures/digEd1.png">
+					</section>
+					<section>
+						<h3>Digital Editions</h3>
+						<img data-src="Pictures/de2.png">
+					</section>
+					<section>
+						<h3>Digital Editions</h3>
+						<img data-src="Pictures/de3.png">
+					</section>
+					<section>
+						<h3>'Cultural Evolution'</h3>
+						<h4>(quantitative culturology)</h4>
+						<img data-src="Pictures/Movie1.png" height="400">
+					</section>
+					<section>
+						<h3>'Cultural Evolution'</h3>
+						<h4>(quantitative culturology)</h4>
+						<img data-src="Pictures/Movie2.png" height="350">  <img data-src="Pictures/Movie3.png" height="350">
+					</section>
+					<section>
+						<h3>How Do We Read Graphic Novels?</h3>
+						<img data-src="Pictures/Comics.png">
+					</section>
+					<section>
+						<h3>Eye-tracking helps!</h3>
+						<img data-src="Pictures/Comics2.png">
+					</section>
+					<section>
+						<h3>Focus on text, faces, hands</h3>
+						<img data-src="Pictures/Comics3.png" height="350">  <img data-src="Pictures/Comics4.png" height="350">
+					</section>
+					<section>
+						<h3>Culturomics</h3>
+						<ul><li>Michel, Jean-Baptiste; Liberman Aiden, Erez (2011). Quantitative Analysis of Culture Using Millions of Digitized Books. Science. 331 (6014): 176–82</li>
+						</ul>
+					</section>
+					 <section>
+						<h3>Google Books</h3>
+						<ul>
+						<li>'We constructed a corpus of digitized texts containing about 4% of all books ever printed. Analysis of this corpus enables us to investigate cultural trends quantitatively.
+ We survey the vast terrain of “culturomics”, focusing on linguistic and cultural phenomena <...>'</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Culturomics in Google Books</h3>
+						<img data-src="Pictures/g1.png">
+					</section>
+					<section>
+						<h3>Culturomics in Google Books</h3>
+						<img data-src="Pictures/g2.png">
+					</section>
+					<section>
+						<h3>Culturomics in Google Books</h3>
+						<img data-src="Pictures/war.jpg">
+					</section>
+					<section>
+						<h3>Culturomics in Google Books</h3>
+						<img data-src="Pictures/slavery.jpg">
+					</section>
+					<section>
+						<h3>The idea of Distant Reading</h3>
+						"[…] if you want to look beyond the canon […], close reading will not do it. It’s not designed to do it, it’s designed to do the opposite. […] we know how to read texts, now let’s learn how not to read them. Distant reading: where distance […] is a condition of knowledge […]."
+					</section>
+					<section>
+						<h3>stylometry</h3>
+						<img data-src="Pictures/galbraith_mds.png">
+					</section>
+					<section>
+						<h3>stylometry</h3>
+						<img data-src="Pictures/stylo.png">
+					</section>
+					<section>
+						<h3>Networks</h3>
+						<img data-src="Pictures/Networks.png">
+					</section>
+					<section>
+						<h3>Networks</h3>
+						<img data-src="Pictures/networks2.png">
+					</section>
+					<section>
+						<h3>Networks</h3>
+						<img data-src="Pictures/hamlet.png" height = "500">
+					</section>
+					<section>
+						<h3>Networks</h3>
+						<img data-src="Pictures/wap.png" height = "500">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>And finally — sweets! 🍰 🍬</h1>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+			controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+		</script>
+	</body>
+</html>
