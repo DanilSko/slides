@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Сетевой анализ</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+		<style>
+.highlight { 
+    color: orange;
+}
+</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h3>Сетевой анализ в литературе</h3>
+						<img data-src="Pictures/godunov.png" height="700">
+					</section>
+					<section>
+						<h3>И вообще -- в художественных мирах</h3>
+						<img data-src="Pictures/starwars.png" >
+					</section>
+					<section>
+						<h3>Это красиво...</h3>
+						<img data-src="Pictures/betweenness-pushkin-boris-godunov.png" >
+					</section>
+					<section>
+						<h3>... и научно</h3>
+						<img data-src="Pictures/goethe.png" >
+					</section>
+					<section>
+						<h3>... и научно</h3>
+						<img data-src="Pictures/superposter.png" >
+					</section>
+					
+				</section>
+				<section>
+					<section>
+						<h1>Что мы хотим попробовать</h1>
+					</section>
+					<section>
+						<h3>1. Сравнить структуру детективов</h3>
+						<img data-src="Pictures/sherlock.png" >
+					</section>
+				</section>
+				
+				
+				<!--<section>
+				<h2>Now — hands on with Gephi!</h2>
+				<a href="https://slides.com/danilsko/gephi">slides.com/danilsko/gephi</a>
+				</section> -->
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+			controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+		</script>
+	</body>
+</html>
