@@ -46,7 +46,7 @@
 						</ol>
 					</section> 
 				</section>
-				<section>
+				<section id="introd">
 					<section>
 						<h3>Сеть (граф)</h3>
 						<img data-src="Pictures/mdh/sample.png" height ="500">
@@ -64,7 +64,7 @@
 						<img data-src="Pictures/mdh/sample_2.png" height ="500">
 					</section>
 				</section>
-				<section>
+				<section id = "social">
 					<section>
 							<h3>Анализ социальных сетей</h3>
 							<p>Начало в 1930-е: Курт Левин, Джейкоб (Якоб) Морено</p>
@@ -101,7 +101,7 @@
 					<section>
 							<h3>Чем small world граф формально отличается от остальных?</h3>
 						<p>1 критерий: коэффициент кластеризации значительно выше, чем в сопоставимом по размеру случайном графе</p>
-						<img data-src="Pictures/clusteringsmallworld.png">
+						<img data-src="Pictures/smallsample.png">
 					</section>
 					<section>
 							<h3>Чем small world граф формально отличается от остальных?</h3>
@@ -183,8 +183,15 @@
 					</ul>
 					</section> -->
 					<section>
-					<h3>Алиса в стране чудес</h3>
-					<img data-src="Pictures/Alice.png" >
+							<h3>Соцсети Шекспира оказались похожи</h3>
+							<h5>...на реальные соцсети в первобытных сообществах</h5>
+						<p>The Small World Of Shakespeare’s Plays (Dunbar et al, 2003)</p>
+					</section>
+					<section>
+					<h3>Сравнение сетей 60 британских романов</h3>
+					<ul>
+						<li>Elson, D. K., Dames, N. and McKeown, K. (2010), Extracting Social Networks from Literary Fiction, Proceedings of ACL 2010, Uppsala, Sweden.</li>
+					</ul>
 					</section>
 					
 					<section>
@@ -202,7 +209,7 @@
 					</section>
 					
 					<section>
-						<h3>Масштабирование исследований</h3>
+						<h3>После Моретти: масштабирование исследований </h3>
 						<img data-src="Pictures/germansuperposter.png" >
 					</section>
 					<section>
@@ -217,7 +224,7 @@
 					<section>
 						<h3>А можно смотреть динамику формальных метрик сети</h3>
 						<h4>Например, плотность</h4>
-						<img data-src="Pictures/lowdenlingdan.png" height="350"> <img data-src="Pictures/highdenlingdan.png" height="350">
+						<img data-src="Pictures/mdh/lowden3.png" height="350"> <img data-src="Pictures/mdh/highden.png" height="350">
 					</section>
 					<section>
 						<h3>Плотности комедии и трагедии отличаются</h3>
@@ -226,10 +233,31 @@
 					<section>
 						<h3>Таких исследований все больше</h3>
 						<a href="https://dh2018.adho.org/analyzing-social-networks-of-xml-plays-exploring-shakespeares-genres/">Analyzing Social Networks Of XML Plays: Exploring Shakespeare’s Genres</a>
+					</section> 
+					<section>
+						<h3>Теперь это можно делать на руссом материале!</h3>
+						<img data-src="Pictures/superposter.svg" >
 					</section>
 					<section>
-						<h3>А теперь — к русскому материалу!</h3>
-						<img data-src="Pictures/superposter.svg" >
+						<h2>Какие русские пьесы обладают свойством "малого мира"?</h2>
+						<img data-src="Pictures/smallsample.png" >
+					</section>
+					<section>
+						<h2>Какие русские пьесы обладают свойством "малого мира"?</h2>
+						<img data-src="Pictures/clusteringsmallworld.png">
+					</section>
+					<section>
+						<h3>Приглядимся к Борису Годунову</h3>
+						<img data-src="Pictures/pictures_cameraready/zoom_godunov.png" >
+					</section>
+					<section>
+						<h3>Примерно как с Гете </h3>
+						<img data-src="Pictures/goethe.png" >
+					</section>
+					<section>
+						<h3>Классицизм против романтизма </h3>
+						<img data-src="Pictures/sumarokov.png" height="420">
+						<img data-src="Pictures/godunov.png" height="420">
 					</section>
 					<!-- <section>
 						<h2>Практика 1</h2>
@@ -239,16 +267,13 @@
 						</ul>
 					</section> -->
 					<section>
-						<h2>Еще немного графовой эстетики</h2>
-					</section>
-					<section>
 						<h3>Классицизм против романтизма</h3>
 						<h4>(<a href="https://dracor.org/rus">rus.dracor.org</a>)</h4>
-						<img data-src="Pictures/sumarokov.png" height="420">
-						<img data-src="Pictures/godunov.png" height="420">
+						<img data-src="Pictures/sumarokov.png" height="400">
+						<img data-src="Pictures/godunov.png" height="400">
 					</section>
 					<section>
-						<h3>Сети для изучения иерархии персонажей</h3>
+						<h3>От макро- обратно к микроанализу</h3>
 					</section>
 					<section>
 						<h3>Важный ли герой Гаврила Пушкин?</h3>
@@ -267,8 +292,27 @@
 						<img data-src="Pictures/bitkov.png" >
 					</section> 
 				</section>
-				
-				<section>
+				<section id = "methodology">
+					<section>
+						<h3>Методология и техника сетевого анализа</h3>
+						<h5>(Даня, хватит бла-бла, давай лучше как это делать)</h5>
+					</section>
+					<section>
+						<h3>Что считать узлом?</h3>
+						<ul>
+							<li>Вроде бы персонажа</li>
+							<li>Что делать с групповыми персонажами ("Народ", "Все")?</li>
+							<li>Повторяющиеся неименованные персонажи ("Другой солдат")</li>
+						</ul>
+					</section> 
+					<section>
+						<h3>Что считать связью? (вот тут сложно)</h3>
+						<ul>
+							<li>Коммуникация</li>
+							<li>Взаимодействия</li>
+							<li>Совместные упоминания в тексте</li>
+						</ul>
+					</section>
 					<section>
 						<h3>Что есть в графе кроме узлов и ребр?</h3>
 					</section>
@@ -278,49 +322,36 @@
 					</section>
 					<section>
 						<h3>Взвешенный граф</h3>
-						<img data-src="Pictures/mdh/sample_1.png"  height ="6 00">
+						<img data-src="Pictures/mdh/sample_1.png"  height ="600">
 					</section>
 					<section>
 						<h3>Направленный граф</h3>
 						<img data-src="Pictures/dirnetwork.png">
 					</section>
 					<section>
-						<h3>Направленный граф</h3>
-						<img data-src="Pictures/mdh/sample_0_dir.png">
+					<h3>Алиса в стране чудес</h3>
+					<img data-src="Pictures/Alice.png" >
 					</section>
-				</section>
-				<section>
-					<section>
-						<h3>Методология и техника </h3>
-						<h5>(Даня, хватит бла-бла, давай лучше как это делать)</h5>
-					</section>
-					<section>
-						<h3>Что считать узлом?</h3>
-						<ul>
-							<li>Вроде бы персонажа</li>
-							<li>Что делать с групповыми персонажами ("Народ", "Все")?</li>
-							<li>Повторяющиеся неименованные персонажи ("Другой солдат")</li>
-						<ul>
-					</section>
-					<section>
-						<h3>Что считать связью?</h3>
-						<ul>
-							<li>Вроде бы персонажа</li>
-							<li>Что делать с групповыми персонажами ("Народ", "Все")?</li>
-							<li>Повторяющиеся неименованные персонажи ("Другой солдат")</li>
-						<ul>
-					</section>
+				
 					<section>
 						<h3>Способы извлечения сети из текста</h3>
 						<ul>
 							<li>С помощью сложной компьютерной лингвистики</li>
-							<li>C помощью опоры на разметку (степень автоматизации разметки бывает разной)</li>
-							
+							<li>60 британских романов</li>
+							<li><a href="https://www.tolstoy.online/">tolstoy.online</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Способы извлечения сети из текста</h3>
 						<ul>
+							<li>C помощью опоры на разметку 
+							<ul><li>(степень автоматизации разметки бывает разной...)</li></ul>
+							</li>
+						</ul>
 					</section>
 					<section>
 					<p>
-					<h3>Легче всего в пьесе</h3>
+					<h3>Легче всего автоматизировать в пьесе</h3>
 					“Networks are made of vertices and edges; plot networks, of characters and verbal exchanges. In plays this works well, because words are deeds, deeds are almost always words, and so, basically, a <span class="fragment highlight-green">network of speech acts is a network of actions</span>”.  </p>
 					<p>Franco Moretti. “Distant Reading”</p>
 					</section>
@@ -373,13 +404,11 @@
 					<!--<section>
 						<h3>Драма  </h3><h3> = easy target for network formalisation </h3><h3>= easier to automate & scale up corpus markup!</h3>
 					</section> -->
-					
 					<section>
 					<h3>Мы размечаем при помощи стандарта</h3>
 						<img style="background: rgba(255, 255, 255, 0.12);border: 4px solid #eeeeee;box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) " data-src="Pictures/teilogo.svg" height = "200" >
 					<h2 id="text-encoding-initiative">Text Encoding Initiative (TEI/XML)</h2>
 					</section>
-					
 					<section data-markdown="" data-markdown-parsed="true" class="future" style="top: 21.5px; display: none;" hidden="" aria-hidden="true"><h3 id="extract-from-tei-encoded-play">Extract from TEI-Encoded Play</h3>
 					<p><br></p>
 					<pre><code class="lang-xml hljs">(…)
@@ -423,7 +452,7 @@
 					</code></pre>
 					<p><small>(TEI-encoded drama has <code>&lt;sp&gt;</code> and <code>&lt;speaker&gt;</code> tags and machine-readable act/scene segmentation.)</small></p>
 					</section>
-					<section data-markdown="" data-markdown-parsed="true" class="future" style="top: 156px; display: none;" aria-hidden="true" hidden=""><h2 id="drama-corpora-in-tei">Корпуса драмы  TEI</h2>
+					<section data-markdown="" data-markdown-parsed="true" class="future" style="top: 156px; display: none;" aria-hidden="true" hidden=""><h2 id="drama-corpora-in-tei">Корпуса драмы в TEI</h2>
 					<p>(facilitating the automated extraction of network data)</p>
 					<ul style = "font-size:80%">
 					<li><a href="http://www.theatre-classique.fr/">Théâtre Classique</a>: 1090 plays from the 17th and 18th century</li>
@@ -433,21 +462,17 @@
 					<li><a href="https://rus.dracor.org/">Russian Drama Corpus</a>: 90 Russian-language plays from 1740s till 1940s</li>
 					<li><a href="http://www.dramawebben.se/">Dramawebben</a>: 62 Swedish plays</li>
 					</ul>
-					</section>
+					</section>	
 					<section>
-					<h3>Gephi!</h3>
+						<h3>Способы извлечения сети из текста</h3>
 						<ul>
-							<li>Десктопная программаа для работы с графами</li>
-							<li>Like Photoshop for graphs (gephi.org)</li>
-							<li>Много фич для анализа и визуализации</li>
-							<li>Написана на Java - работает под всеми ОС</li>
-							<li>Но таки глючная:) </li>
+							<li>Руками!  
+							<ul>
+								<li>И это не такой уж плохой способ! </li>
+								<li>Даже программисты делают это (когда никто не видит)</li>
+							</ul>
+							</li>
 						</ul>
-					</section>
-					<section>
-					<h3>Гефи или жефи?</h3>
-						<img data-src="Pictures/pronounced.gif" >
-						<p><a href="https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/en/how%20should%20Gephi%20be%20pronounced.adoc">ссылка</a></p>
 					</section>
 					<section>
 						<h3>CSV — cамый простой формат кодирования сетей</h3>
@@ -470,8 +495,23 @@
 					<section>
 						<p> <a href="https://ezlinavis.dracor.org/">Ezlinavis</a></p>
 					</section>
-				</section>
+					<section>
+					<h3>Gephi!</h3>
+						<ul>
+							<li>Десктопная программаа для работы с графами</li>
+							<li>Like Photoshop for graphs (gephi.org)</li>
+							<li>Много фич для анализа и визуализации</li>
+							<li>Написана на Java - работает под всеми ОС</li>
+							<li>Но таки глючная:) </li>
+						</ul>
+					</section>
+					<section>
+					<h3>Гефи или жефи?</h3>
+						<img data-src="Pictures/pronounced.gif" >
+						<p><a href="https://github.com/seinecle/gephi-tutorials/blob/master/src/main/asciidoc/en/how%20should%20Gephi%20be%20pronounced.adoc">ссылка</a></p>
+					</section>
 					
+				</section>
 				<section class="RUBBISH">
 					<section>
 							<h2>Почему же все, даже совсем гуманитарии, любят сеточки?</h2>
@@ -574,9 +614,6 @@
 					</section>
 				</section>
 				 	
-				
-				
-				
 				<!--<section>
 				<h2>Now — hands on with Gephi!</h2>
 				<a href="https://slides.com/danilsko/gephi">slides.com/danilsko/gephi</a>
