@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Комплинг начало</title>
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/black_original.css"> <!-- _2 -->
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+					<h1>Компьютерная лингвистика</h1>
+					</section>
+						<section>
+						<h3>Этот курс делает Фран Таерз</h3>
+						<img src ="../Pictures/fran.jpeg">
+						</section>
+						<section>
+						<h3>Структура курса</h3>
+						<ul>
+							<li>Подготовительная часть</li>
+							<li>Сегментация и токенизация</li>
+							<li>Морфологический анализ</li>
+							<li>Синтаксический анализ на деревьях зависимостей</li>
+						</ul>
+						</section>
+						<section>
+						<h3>Подробнее (точка входа):</h3>
+							<h4><a href="https://ftyers.github.io/2018-komp-ling/">ftyers.github.io/2018-komp-ling</a></h4>
+						</section>
+						<section>
+						<h3>Подготовительная часть</h3>
+						<ul>
+							<h5><a href="https://ftyers.github.io/2018-komp-ling/practicals/unix.md">ftyers.github.io/2018-komp-ling/practicals/unix.md</a></h5>
+							<h5><a href="https://ftyers.github.io/079-osnov-programm/classes/01.html">Unix for Poets (unicode adaptation)</a></h5>
+						</ul>
+						</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+			defaultTiming: 120,
+			controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+		</script>
+	</body>
+</html>
