@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Сетевой анализ</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+		<style>
+.highlight { 
+    color: orange;
+}
+</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Сетевой анализ</h1>
+						<h3>...в исследовании языка и культуры</h3>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Эту презентацию лучше не листать стрелочками</h3>
+						<p>Вперед <span style="color:blue;">ПРОБЕЛОМ</span>, назад — <span style="color:orange;">ШИФТ+ПРОБЕЛОМ</span></p>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h3>Что сейчас будет</h3>
+						<ol>
+							<li>Сеть (граф) как модель</li>
+							<li>Что можно превратить в сеть и исследовать как сеть?</li>
+							<li>Cети (графы) вокруг нас</li>
+							<li>С кем дружил Бэкон, Пушкин на посылках: сети в гуманитарных науках</li>
+							<!-- <li>Как это делать: начнем  разговор о технологиях </li> -->
+						</ol>
+					</section> 
+					<section>
+					<h3>Зачем мне это знать</h3>
+						<ol>
+							<li>Вокруг нас одни сплошные сети</li>
+							<li>Сетевой анализ используется почти во всех науках</li>
+							<li>Сети красивые!</li>
+						</ol>
+					</section>
+					<section data-background-image="Pictures/inostr/intro_inostr_wap.png" data-background-size="contain"></section>
+				</section>
+				<section>
+					<section>
+						<h1>Что за сети?</h1>
+					</section>
+					<section>
+						<h3>Сеть (граф)</h3>
+						<img data-src="Pictures/network.png">
+					</section>
+					<section>
+						<h3>состоит из узлов...</h3>
+						<img data-src="Pictures/networknodes.png">
+					</section>
+					<section>
+						<h3>...и ребер</h3>
+						<img data-src="Pictures/networkedges.png">
+					</section>
+					<section>
+						<h4>Что можно представить в виде сети?</h4>
+						<img data-src="Pictures/network.png">
+					</section>
+					<section>
+						<h3>Да все что угодно</h3>
+						<img data-src="Pictures/networks.png">
+					</section>
+					<!-- <section>
+						<h3>А еще если посмотреть сверху, это похоже на</h3>
+						<img data-src="Pictures/network.png">
+					</section>
+					<section>
+						<h3>Острова и мосты между ними</h3>
+						<img data-src="Pictures/konigbridges.png">
+					</section>
+					<section>
+						<h3>Задача о 7 мостах Кёнигсберга</h3>
+						<img data-src="Pictures/konigbridges1.png" height = "400">
+					</section>
+					<section>
+						<h3>Так появилась теория графов</h3>
+						<img data-src="Pictures/konigbridges2.png">
+					</section> -->
+					<section>
+						<h3>Cеть авиасообщений</h3>
+						<img data-src="Pictures/global-air-traffic-map.gif" height="500">
+					</section>
+					<section>
+						<h3>Направленный граф</h3>
+						<img data-src="Pictures/dirnetwork.png">
+					</section>
+					<section>
+						<h3>А вот еще одна транспортная сеть</h3>
+						<img data-src="Pictures/mosmetro.png">
+					</section>
+					<section>
+						<h4>Откуда он знает, сколько мне ехать?</h4>
+						<img data-src="Pictures/yandexmetropath.png" height="500">
+					</section>
+					<section>
+						<h3>Взвешенный граф</h3>
+						<img data-src="Pictures/wieghtnetwork.png">
+					</section>
+					
+					
+				</section>
+				<section id="network_age">
+					<section data-background-image="Pictures/networks_around.jpg">
+					<h3 style="color:black">Эра сетей</h3>
+					</section>
+					<section>
+						<h3>Интернет — по определению сеть</h3>
+						<img data-src="Pictures/web.png">
+					</section>
+					<section>
+						<h3>Wikipedia тоже</h3>
+						<img data-src="Pictures/wiki.png">
+					</section>
+					<section>
+						<h3>...и конечно, социальные сети</h3>
+						<img data-src="Pictures/vk.png">
+					</section>
+					<!-- <section>
+							<h2>Но вообще-то это настоящая наука</h2>
+					</section>
+					<section data-background-image="Pictures/sociogram.jpg">
+						<h2>Анализ социальных сетей</h2>
+					</section> -->
+					<section>
+							<h3>Анализ социальных сетей</h3>
+							<p>Начало в 1930-е: Курт Левин, Джейкоб (Якоб) Морено</p>
+							<img data-src="Pictures/moreno.png" height="350">
+							<img data-src="Pictures/moreno2.png" height="350"> <!--aling="centre"--> 
+							<p>
+							<a href="http://www.martingrandjean.ch/social-network-analysis-visualization-morenos-sociograms-revisited/">обновленная версия на сайте Мартина Гражана (Martin Grandjean)</a>
+							</p>				
+					</section>
+					<section>
+							<h3>Анализ социальных сетей</h3>
+						<p>Манчестерская школа антропологии (Макс Глакман и другие) в 1950-е</p>
+						<img data-src="Pictures/tribalnetwork.png">
+					</section>
+					<section>
+							<h4>Степень (degree) узла</h4>
+						<img data-src="Pictures/centrality.png" height="400" >
+						<p class="fragment fade-up">Степень A = 5</p>
+					</section>
+					<section>
+							<h4>Центральность по посредничеству (betweenness centrality)</h4>
+						<img data-src="Pictures//inostr/betweenness_demo_black.png"  height="500">
+					</section>
+					<!--
+					 <section>
+							<h3>Анализ социальных сетей</h3>
+	
+						<p>Гарвардский прорыв ('Harvard Breakthrough') в 1960-е (Харрисон Уайт и другие)</p>
+						<img data-src="Pictures/harvard.gif">
+
+					</section> -->
+					<section>
+							<h4>Гарвардский прорыв. Те самые шесть рукопожатий</h4>
+						<img data-src="Pictures/sixdegrees2.png" height="400">
+					</section>
+					<section>
+							<h3>Это придумал Стэнли Милгрэм</h3>
+						<img data-src="Pictures/milgram.png">
+					</section> 
+					<section>
+							<h3>Small World Experiment</h3>
+						<img data-src="Pictures/smallworld.gif">
+					</section>
+					<section>
+							<h3>Small World Experiment</h3>
+						<img data-src="Pictures/sixdegrees.png">
+					</section>
+				</section>
+				<section id="humanities_networks">
+					<section>
+					<h2>Сетевой анализв гуманитарных науках</h2>
+					</section>
+					<section>
+					<h3>Кто кого знал в Британии 500 лет назад?</h3>
+						<ul>
+						<li>Проект Six Degrees of Francis Bacon (шесть рукопожатий Фрэнсиса Бэкона)</li>
+						<li>Более 13.000 человек, более 200.000 связей</li>
+						<li>Извлечено из Oxford Dictionary of National Biography</li>
+						<li><a href="http://www.sixdegreesoffrancisbacon.com/">sixdegreesoffrancisbacon.com</a></li>
+						</ul>
+					</section>
+					<section>
+							<h3>People of Medieval Scotland</h3>
+						<img data-src="Pictures/scotland.png" height="450">
+						<p><a href="http://www.poms.ac.uk/">poms.ac.uk</a></p>
+					</section>
+				</section>
+				<section id="fictional_networks">
+					<section>
+					<h1>Сети в вымышленных мирах</h1>
+					</section>
+					<section>
+					<h3>...не ограничиваются литературой!</h3>
+						<img data-src="Pictures/starwars.png" >
+					</section>
+					<section>
+					<h3>Предыстория</h3>
+					<p>Schweizer T., Schnegg M. Die soziale Struktur der. „Simple Storys“: Eine Netzwerkanalyse. (1998)</p>
+						<img data-src="Pictures/simplestories.png" height="420">
+					</section>
+					<section>
+					<h3>Что показал сетевой анализ вселенной Marvel?</h3>
+					<li>Alberich, R., Miro-Julia, J., Rossello, F. (2002), Marvel universe looks almost like a real social network. </li>
+					<li>P. M. Gleiser. How to become a superhero. Journal of Statistical Mechanics: Theory and Experiment, (09):P09020, 2007.</li>
+					</section>
+
+					<section data-background-image="Pictures/captainamerica.png" data-background-size="contain">
+					<h3>Что вселенная Marvel вращается вокруг Капитана Америки</h3>
+					</section>
+					<section>
+					<h1>Но это же банально!</h1>
+					</section>
+					<section>
+					<h4>А еще, возможно, вскрыло стратегию продвижения супергероев</h4>
+					<img data-src="Pictures/superheroes.png" >
+					</section>
+					<h3>Социальные сети у Шекспира</h3>
+					<p style="font-size:70%">Stiller J., Nettle D., Dunbar R.I.M. The small world of Shakespeare’s plays. // Human nature. 2003. 14/4. С. 397–408.</p>
+						<img data-src="Pictures/inostr/shakespeare_smalll_world.png" height="420">
+					</section>
+					<section>
+					<h3>Социальные сети у Шекспира</h3>
+					<p style="font-size:70%">Stiller J., Nettle D., Dunbar R.I.M. The small world of Shakespeare’s plays. // Human nature. 2003. 14/4. С. 397–408.</p>
+						<img data-src="Pictures/Shake2003_table.png" height="500">
+					</section>
+					<!-- <section>
+							<h3>Те самые шесть рукопожатий</h3>
+						<img data-src="Pictures/sixdegrees2.png" height="400">
+					</section> -->
+					<section>
+					<h3>Сравнение сетей 60 британских романов</h3>
+					<ul>
+						<li>Elson, D. K., Dames, N. and McKeown, K. (2010), Extracting Social Networks from Literary Fiction, Proceedings of ACL 2010, Uppsala, Sweden.</li>
+					</ul>
+					<img data-src="Pictures/elson.png" height ="350">
+					<img data-src="Pictures/elson_data.png" height ="350">
+					</section> 
+					
+					<section>
+						<h4>Анализ сети Гамлета от Франко Моретти</h4>
+						<img data-src="Pictures/hamlet.png" height ="450" >
+						<p style="font-size:65%">Франко Моретти, «Теория сетей и анализ сюжета» (2011)</p>
+					</section>
+					<section>
+						<h3>Моретти о раскрытии роли Горацио через сети</h3>
+						<q>Though Horatio is an old fixation of mine, I had never fully understood his role in Hamlet until I looked at the <span class="fragment highlight-green">play’s network structure</span>. </q>
+						<p>Franco Moretti. “Distant Reading”</p>
+					</section>
+					<section> 
+					<img data-src="Pictures/hamlet_moretti_cuts.png" height ="550" >
+					</section>
+					<section>
+					<h5>Переведем в цифры</h5>
+					<table>
+							<thead>
+							<tr>
+								<th>Персонаж</th>
+								<th>Степень</th>
+								<th>Промежуточность (betweenness)</th>
+							</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Гамлет</td>
+									<td>19</td>
+									<td>219,4</td>
+								</tr>
+								<tr>
+									<td>Король (Клавдий)</td>
+									<td>16</td>
+									<td><span style="color:red">131,6</span></td>
+								</tr>
+								<tr>
+									<td>Горацио</td>
+									<td>14</td>
+									<td><span style="color:green">176,7</span></td>
+								</tr>
+							</tbody>
+							
+					</table>
+					</section>
+					<section>
+						<h5>Визуализируем:</h5>
+						<img data-src="Pictures/inostr/hamlet_degree.png" height ="400" ><img data-src="Pictures/inostr/hamlet_betweenness.png" height ="400" >
+					</section>
+				</section>
+
+				<section id="rusdracor_explained">
+					<section>
+							<h3>Для русских пьес — RusDraCor</h3>
+						<img data-src="Pictures/rusrdacor.png" height="450">
+						<h3><a href="https://rus.dracor.org">rus.dracor.org</a></h3>
+					</section>
+					<section>
+							<h3>(Shiny RusDraCor)</h3>
+						<img data-src="Pictures/shiny.png" height="450">
+						<p><a href="https://shiny.dracor.org/">shiny.dracor.org</a></p>
+					</section>
+					<section data-background-image="Pictures/140_plays.png" data-background-size="contain"> <!-- data-background-size="cover"  -->
+					</section>
+					<section data-background-image="Pictures/germansuperposter.png" data-background-size="cover">
+					</section>
+					<section>
+					<h3>тут и глазами можно что-то ухватывать</h3>
+						<img data-src="Pictures/reigen.png" >
+					</section>
+					<section>
+					<h3>тут и глазами можно что-то ухватывать</h3>
+						<img data-src="Pictures/goethe.png" >
+					</section>
+					<section>
+					<h3>Гете и Шекспир</h3>
+						<img data-src="Pictures/inostr/Gotz.png" height="400">
+						<img data-src="Pictures/inostr/HenryVIII.png" height="400">
+					</section>
+					<section>
+						<h3>RusDraCor: Борис Годунов</h3>
+						<img data-src="Pictures/pictures_cameraready/zoom_godunov.png" >
+					</section>
+					<section>
+						<h3>Классицизм против "шекспировской пьесы"</h3>
+						<img data-src="Pictures/sumarokov.png" height="420">
+						<img data-src="Pictures/godunov.png" height="360">
+					</section>
+					
+					<section>
+						<h3>Важный ли герой Гаврила Пушкин?</h3>
+						<img data-src="Pictures/gavrila1.png" >
+					</section>
+					<section>
+						<h3>Пушкин на посылках и betweenness centrality</h3>
+						<img data-src="Pictures/gavrila2.png" height="600">
+					</section>
+					<section>
+					<video data-autoplay src="videos/godunov.mp4">
+					</video>
+					</section>
+					
+					<section>
+						<h3>Битяговский (двойной агент)</h3>
+						<img data-src="Pictures/bityag.png" >
+					</section>
+					<section>
+						<h3>Битков (соглядатай/двойник Пушкина)</h3>
+						<img data-src="Pictures/bitkov.png" >
+					</section> 
+					
+					<!-- <section>
+						<h4>Какие русские пьесы обладают свойствами "малого мира"?</h4>
+						<img data-src="Pictures/smallworld_label_cropped.png">
+						<p>Исследование Евгении Устиновой (МИЭМ)</p> 
+					</section> -->
+					<section>
+						<h3>Жанры пьес — и плотности сетей</h3>
+					<img data-src="Pictures/lowden_gerfra.png"  height ="350">
+					<img data-src="Pictures/highden_gerfra.png"  height ="350">
+					<p>Плотность = 0.5 (3/6) &nbsp;&nbsp;&nbsp;&nbsp; Плотность = 1 (6/6)</p>
+					</section>
+					<section>
+						<h3>Плотности комедии и трагедии отличаются</h3>
+						<img data-src="Pictures/density.png" >
+					</section>
+					<section>
+						<h3>Плотности комедий и не-комедий в RusDraCor</h3>
+						<img data-src="Pictures/comedy_non_comedy_loess.png" >
+						<p style="font-size:50%">Осторожно, предварительные данные!</p>
+					</section>
+				</section>
+				<section>
+					<section>
+				<h3>Gephi (gephi.org)</h3>
+				<ul>
+				<li>Простой инструмент для анализа сетей (не надо уметь программировать)</li>
+<li>"like Photoshop but for graph data" (gephi.org)</li>
+<li>Открытый и бесплатный</li>
+<li>Написан на Java и работает на всех основных ОС</li>
+<li>Расширяемый (можно создавать плагины)</li>
+<li>…немного глючный : )</li>
+				</ul>
+					</section>
+					<section>
+						<h3>CSV — cамый простой формат кодирования сетей</h3>
+						<ol>
+						<li>Даня, Маша, 1</li>
+						<li>Вася, Петя, 3</li>
+						<li>...</li>
+						</ol>
+					</section>
+					<section>
+						<h3>Из такого:</h3>
+						<ol>
+						</ol>
+					</section>
+					<section>
+						<p> <a href="https://ezlinavis.dracor.org/">Ezlinavis</a></p>
+					</section>
+					<!-- <section> 
+					<p style="font-size:300%"><a href="https://goo.gl/oX3VDj">goo.gl/oX3VDj</a></p>
+					</section> -->
+					
+					<section>
+						<h2>Иииии -- новые доклады!</h2>
+						<a href="https://docs.google.com/spreadsheets/d/1ZKapLBN2nO1Xm9YzS-0Z6B4KpTWdf358SAi0lA-9MZM/edit?usp=sharing">tinyurl.com/y45as9h8</a>
+					</section>
+					<section> 
+					<img data-src="Pictures/lastpic.png" height="500">
+					</section>
+					
+					
+				</section>
+				<!--<section>
+				<h2>Now — hands on with Gephi!</h2>
+				<a href="https://slides.com/danilsko/gephi">slides.com/danilsko/gephi</a>
+				</section> -->
+				
+				<!-- 
+				<section id="karate_club">
+					<section>
+					<h3>Извлечение сообществ: Karate Club</h3>
+						<img data-src="Pictures/karate1.png" height = "550">
+					</section>
+					<section>
+					<h3>Извлечение сообществ: Karate Club</h3>
+					<ul>
+					<li>Антрополог Уэйн Зэкэри (Wayne Zachary) изучал небольшой карате-клуб с 1970 по 1972</li>
+					<li>Он записывал неформальные связи между участниками за пределами клуба</li>
+					<li>Во время исследования случился конфликт между руководством и инструктором </li>
+					</ul>
+					<!-- During the study a conflict arose between the administrator "John A" and instructor "Mr. Hi" (pseudonyms), which led to the split of the club into two.-->
+					</section>
+					<section>
+						<h3>Извлечение сообществ: Karate Club</h3>
+						<ul>
+						<li>Половина участников ушла вместе с инструктором делать новый клуб</li>
+						<li>Вторая половина осталась (или совсем бросила карате)</li>
+						<li>Зэкэри написал программу, которая на основе собранных до раскола данных пытается предугадать границы раскола группы</li>
+						<li><a href="http://www1.ind.ku.dk/complexLearning/zachary1977.pdf">Ссылка на статью Зэкэри (1977)</a></li>
+						</ul>
+					</section>
+					
+					<section>
+						<h3>Извлечение сообществ: Karate Club</h3>
+					<q>The process leading to fission is viewed as an unequal flow of sentiments and information across the ties in a social network. This flow is unequal because it is uniquely constrained by the contextual range and sensitivity of each relationship in the network. The subsequent differential sharing of sentiments leads to the formation of subgroups with more internal stability than the group as a whole, and results in fission</q>
+					</section>
+					
+					<section>
+					<h3>Матрица (таблица) связей - исходные данные</h3>
+						<img data-src="Pictures/karatematrix.png" height="500">
+					</section>
+					<section>
+					<h3>Сеть этих связей</h3>
+						<img data-src="Pictures/karateviz.png" height="500">
+					</section>
+					<section>
+					<h3>Моя визуализация Karate Club</h3>
+						<img data-src="Pictures/karate2.png" >
+					</section>
+					<section>
+					<h3>Karate Club Club</h3>
+					<p>Шуточное сообщество, куда принимают каждый год первого человека, упомянувшего Karate club на научной конференции по сетевому анализу</p>
+					</section> 
+					-->
+				</section>
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+			controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+		</script>
+	</body>
+</html>
