@@ -217,46 +217,62 @@
 				</section>
 				<section id="fictional_networks">
 					<section>
+						<h3>Сегодня</h3>
+						<ul>
+						<li>Сети в вымушленных мирах</li>
+						<li>Делаем сети сами</li>
+						<li>...и визуализируем в Gephi</li>
+						<li><a href="http://www.sixdegreesoffrancisbacon.com/">sixdegreesoffrancisbacon.com</a></li>
+						</ul>
+						
+					</section>
+					<section>
 					<h1>Сети в вымышленных мирах</h1>
 					</section>
 					<section>
-					<h3>...не ограничиваются литературой!</h3>
-						<img data-src="Pictures/starwars.png" >
-					</section>
-					<section>
-					<h3>Предыстория</h3>
+					<h3>Первый пример</h3>
 					<p>Schweizer T., Schnegg M. Die soziale Struktur der. „Simple Storys“: Eine Netzwerkanalyse. (1998)</p>
 						<img data-src="Pictures/simplestories.png" height="420">
 					</section>
+					
 					<section>
-					<h3>Что показал сетевой анализ вселенной Marvel?</h3>
-					<li>Alberich, R., Miro-Julia, J., Rossello, F. (2002), Marvel universe looks almost like a real social network. </li>
-					<li>P. M. Gleiser. How to become a superhero. Journal of Statistical Mechanics: Theory and Experiment, (09):P09020, 2007.</li>
-					</section>
-
-					<section data-background-image="Pictures/captainamerica.png" data-background-size="contain">
-					<h3>Что вселенная Marvel вращается вокруг Капитана Америки</h3>
-					</section>
-					<section>
-					<h1>Но это же банально!</h1>
-					</section>
-					<section>
-					<h4>А еще, возможно, вскрыло стратегию продвижения супергероев</h4>
-					<img data-src="Pictures/superheroes.png" >
-					</section>
 					<h3>Социальные сети у Шекспира</h3>
 					<p style="font-size:70%">Stiller J., Nettle D., Dunbar R.I.M. The small world of Shakespeare’s plays. // Human nature. 2003. 14/4. С. 397–408.</p>
 						<img data-src="Pictures/inostr/shakespeare_smalll_world.png" height="420">
 					</section>
 					<section>
-					<h3>Социальные сети у Шекспира</h3>
+							<h3>Те самые шесть рукопожатий</h3>
+						<img data-src="Pictures/sixdegrees2.png" height="400">
+					</section> 
+					<section>
+							<h4>Сети малого мира (Small World)</h4>
+						<img data-src="Pictures/small_world_nice.jpg">
+					</section>
+					<section>
+					<h3>Плотность сетей понижается с увеличением размера</h3>
 					<p style="font-size:70%">Stiller J., Nettle D., Dunbar R.I.M. The small world of Shakespeare’s plays. // Human nature. 2003. 14/4. С. 397–408.</p>
 						<img data-src="Pictures/Shake2003_table.png" height="500">
 					</section>
-					<!-- <section>
-							<h3>Те самые шесть рукопожатий</h3>
-						<img data-src="Pictures/sixdegrees2.png" height="400">
-					</section> -->
+					<section>
+					<h4>Вымышленные соцсети не ограничиваются литературой</h4>
+						<img data-src="Pictures/starwars.png" >
+					</section>
+					<section>
+					<h3>Сетевой анализ вселенной Marvel</h3>
+					<li>Alberich, R., Miro-Julia, J., Rossello, F. (2002), Marvel universe looks almost like a real social network. </li>
+					<li>P. M. Gleiser. How to become a superhero. Journal of Statistical Mechanics: Theory and Experiment, (09):P09020, 2007.</li>
+					</section>
+
+					<section data-background-image="Pictures/captainamerica.png" data-background-size="contain">
+					<h3>Вселенная Marvel вращается вокруг Капитана Америки</h3>
+					</section>
+					<section>
+					<h1>Но это же банально!</h1>
+					</section>
+					<section>
+					<h4>Разные соцсети у супергероев и суперзлодеев</h4>
+					<img data-src="Pictures/superheroes.png" >
+					</section>
 					<section>
 					<h3>Сравнение сетей 60 британских романов</h3>
 					<ul>
@@ -280,13 +296,19 @@
 					<img data-src="Pictures/hamlet_moretti_cuts.png" height ="550" >
 					</section>
 					<section>
+					<h3>Вспомним про центральности!</h3>
+					<img data-src="Pictures/degree_diss.png" height ="350" >
+					<img data-src="Pictures/betweenness_diss.png" height ="350" >
+					<p style="font-size:40%">Степень &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Нагрузка/центр.по посредничеству (betweenness)</p>
+					</section>
+					<section>
 					<h5>Переведем в цифры</h5>
 					<table>
 							<thead>
 							<tr>
 								<th>Персонаж</th>
 								<th>Степень</th>
-								<th>Промежуточность (betweenness)</th>
+								<th>Нагрузка (betweenness)</th>
 							</tr>
 							</thead>
 							<tbody>
@@ -315,18 +337,17 @@
 					</section>
 				</section>
 
-				<section id="rusdracor_explained">
+				<section id="lina_scaled">
+					
+					 <!-- data-background-size="cover"  -->
 					<section>
-							<h3>Для русских пьес — RusDraCor</h3>
-						<img data-src="Pictures/rusrdacor.png" height="450">
-						<h3><a href="https://rus.dracor.org">rus.dracor.org</a></h3>
+						<h5>Главная идея Моретти — "дальнее" чтение (distant reading)</h5>
+						<q>Literature scholars should <span style="color:red">stop reading books</span> and start <span style="color:#49f704">counting, graphing, and mapping</span> them instead</q>
+						<p>Moretti, 2005</p>
 					</section>
 					<section>
-							<h3>(Shiny RusDraCor)</h3>
-						<img data-src="Pictures/shiny.png" height="450">
-						<p><a href="https://shiny.dracor.org/">shiny.dracor.org</a></p>
-					</section>
-					<section data-background-image="Pictures/140_plays.png" data-background-size="contain"> <!-- data-background-size="cover"  -->
+						<h3>Масштабирование исследований </h3>
+						<img data-src="Pictures/germansuperposter.png" >
 					</section>
 					<section data-background-image="Pictures/germansuperposter.png" data-background-size="cover">
 					</section>
@@ -344,8 +365,37 @@
 						<img data-src="Pictures/inostr/HenryVIII.png" height="400">
 					</section>
 					<section>
+						<h3>Но можно и заниматься полноценным компьютерным distant reading</h3>
+					</section>
+					<section>
+						<h3>Жанры пьес — и плотности сетей</h3>
+					<img data-src="Pictures/lowden_gerfra.png"  height ="350">
+					<img data-src="Pictures/highden_gerfra.png"  height ="350">
+					<p>Плотность = 0.5 (3/6) &nbsp;&nbsp;&nbsp;&nbsp; Плотность = 1 (6/6)</p>
+					</section>
+					<section>
+						<h3>Плотности комедии и трагедии отличаются</h3>
+						<img data-src="Pictures/density.png" >
+					</section>
+					<section>
+							<h3>Для русских пьес — RusDraCor</h3>
+						<img data-src="Pictures/rusrdacor.png" height="450">
+						<h3><a href="https://rus.dracor.org">rus.dracor.org</a></h3>
+					</section>
+					<section data-background-image="Pictures/140_plays.png" data-background-size="contain">
+					</section>
+					<section>
 						<h3>RusDraCor: Борис Годунов</h3>
 						<img data-src="Pictures/pictures_cameraready/zoom_godunov.png" >
+					</section>
+					 <section>
+						<h4>Какие русские пьесы обладают свойствами "малого мира"?</h4>
+						<img data-src="Pictures/smallworld_label_cropped.png">
+						<p>Исследование Евгении Устиновой (МИЭМ)</p> 
+					</section>
+					<section>
+					<h4>Приглядимся-ка к Борису Годунову</h4>
+						<img data-src="Pictures/godunov_hm.jpg" >
 					</section>
 					<section>
 						<h3>Классицизм против "шекспировской пьесы"</h3>
@@ -376,60 +426,286 @@
 					</section> 
 					
 					<!-- <section>
-						<h4>Какие русские пьесы обладают свойствами "малого мира"?</h4>
-						<img data-src="Pictures/smallworld_label_cropped.png">
-						<p>Исследование Евгении Устиновой (МИЭМ)</p> 
+						<h3>Больше Distant Reading на русском материале</h3>
 					</section> -->
-					<section>
-						<h3>Жанры пьес — и плотности сетей</h3>
-					<img data-src="Pictures/lowden_gerfra.png"  height ="350">
-					<img data-src="Pictures/highden_gerfra.png"  height ="350">
-					<p>Плотность = 0.5 (3/6) &nbsp;&nbsp;&nbsp;&nbsp; Плотность = 1 (6/6)</p>
-					</section>
-					<section>
-						<h3>Плотности комедии и трагедии отличаются</h3>
-						<img data-src="Pictures/density.png" >
-					</section>
+					
+					
 					<section>
 						<h3>Плотности комедий и не-комедий в RusDraCor</h3>
 						<img data-src="Pictures/comedy_non_comedy_loess.png" >
 						<p style="font-size:50%">Осторожно, предварительные данные!</p>
 					</section>
 				</section>
-				<section>
+				<!-- <section id = "practice_1">
+				
+				</section> -->
+				<section id = "methodology">
 					<section>
-				<h3>Gephi (gephi.org)</h3>
-				<ul>
-				<li>Простой инструмент для анализа сетей (не надо уметь программировать)</li>
-<li>"like Photoshop but for graph data" (gephi.org)</li>
-<li>Открытый и бесплатный</li>
-<li>Написан на Java и работает на всех основных ОС</li>
-<li>Расширяемый (можно создавать плагины)</li>
-<li>…немного глючный : )</li>
-				</ul>
+						<h3>Методология и техника сетевого анализа</h3>
+						<h5>(Даня, хватит бла-бла, давай лучше как такое делать)</h5>
 					</section>
 					<section>
-						<h3>CSV — cамый простой формат кодирования сетей</h3>
-						<ol>
-						<li>Даня, Маша, 1</li>
-						<li>Вася, Петя, 3</li>
-						<li>...</li>
-						</ol>
+					<h3>2 задачи:</h3>
+					<ol>
+						<li>Получить данные о связях персонажей (т.е. извлечь сеть из текста)</li>
+						<li>Визуализировать, проанализировать, интерпретировать сеть (здесь очень помогает Gephi)</li>
+					</ol>
 					</section>
 					<section>
-						<h3>Из такого:</h3>
-						<ol>
-						</ol>
+						<h2>Чтобы извлечь из текста сеть, нужно понимать... </h2>
 					</section>
 					<section>
-						<p> <a href="https://ezlinavis.dracor.org/">Ezlinavis</a></p>
+						<h3>Что считать узлом?</h3>
+						<ul>
+							<li>Вроде бы персонажа</li>
+							<li>Что делать с групповыми персонажами ("Народ", "Все")?</li>
+							<li>Повторяющиеся неименованные персонажи ("Другой солдат")</li>
+						</ul>
+					</section> 
+					<section>
+						<h1>Что считать связью? <h1>
 					</section>
-					<!-- <section> 
-					<p style="font-size:300%"><a href="https://goo.gl/oX3VDj">goo.gl/oX3VDj</a></p>
+					<section>
+						<h3>Что считать связью? (вот тут сложнее)</h3>
+						<ul>
+							<li>Коммуникация</li>
+							<li>Взаимодействия</li>
+							<li>Совместные упоминания в тексте</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Как мы можем учесть интенсивность взаимдействия/коммуникации?</h3>
+					</section>
+					<section>
+						<h3>Взвешенный граф</h3>
+						<img data-src="Pictures/wieghtnetwork.png">
+					</section>
+					<!-- <section>
+						<h3>Взвешенный граф</h3>
+						<img data-src="Pictures/mdh/sample_1.png"  height ="600">
+					</section>
+					<section>
+						<h3>Направленный граф</h3>
+						<img data-src="Pictures/dirnetwork.png">
+					</section>
+					<section>
+					<h3>Алиса в стране чудес</h3>
+					<img data-src="Pictures/Alice.png" >
 					</section> -->
+				
+					<!-- 
 					
 					<section>
-						<h2>Иииии -- новые доклады!</h2>
+						<h3>Способы извлечения сети из текста</h3>
+						<ul>
+							<li>С помощью сложной компьютерной лингвистики</li>
+							<li>60 британских романов</li>
+							<li><a href="https://www.tolstoy.online/">tolstoy.online</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>Способы извлечения сети из текста</h3>
+						<ul>
+							<li>C помощью опоры на разметку 
+							<ul><li>(степень автоматизации разметки бывает разной...)</li></ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+					<p>
+					<h3>Легче всего автоматизировать в пьесе</h3>
+					“Networks are made of vertices and edges; plot networks, of characters and verbal exchanges. In plays this works well, because words are deeds, deeds are almost always words, and so, basically, a <span class="fragment highlight-green">network of speech acts is a network of actions</span>”.  </p>
+					<p>Franco Moretti. “Distant Reading”</p>
+					</section>
+					
+					<section>
+					
+					
+					<p>АКТ I</p>
+					<p>
+
+
+СЦЕНА 1</p>
+
+
+                      <p><i>Эльсинор. Площадка перед замком.
+                   Франсиско на страже. Входит Бернардо,</i>
+                   
+                   </p>
+<p>
+
+                                  <b>Бернардо</b>
+                                  </p>
+
+                   <p>Кто здесь?</p>
+
+                                 <p><b>Франсиско</b></p>
+
+                   <p>Нет, сам ответь мне; стой и объявись.</p>
+                   
+					</section>
+					<section>
+					<div style="font-size:80%">
+					<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"act"</span>&gt;</span><p><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>АКТ I<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></p>
+					<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"scene"</span>&gt;</span><p><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>СЦЕНА 1<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></p>
+                      <p><i><span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>Эльсинор. Площадка перед замком.
+                   Франсиско на страже. Входит Бернардо,<span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span></i>
+                   </p>
+<p>
+
+                                  <b><span class="hljs-tag">&lt;<span class="hljs-name">speaker</span>&gt;</span>Бернардо<span class="hljs-tag">&lt;/<span class="hljs-name">speaker</span>&gt;</span></b>
+                                  </p>
+
+                   <p>Кто здесь?</p>
+
+                                 <p><b><span class="hljs-tag">&lt;<span class="hljs-name">speaker</span>&gt;</span>Франсиско<span class="hljs-tag">&lt;/<span class="hljs-name">speaker</span>&gt;</span></b></p>
+
+                   <p>Нет, сам ответь мне; стой и объявись.</p>
+                   </div>
+					</section>
+					<section>
+					<h3>Мы размечаем при помощи стандарта</h3>
+						<img style="background: rgba(255, 255, 255, 0.12);border: 4px solid #eeeeee;box-shadow: 0 0 10px rgba(0, 0, 0, 0.15) " data-src="Pictures/teilogo.svg" height = "200" >
+					<h2 id="text-encoding-initiative">Text Encoding Initiative (TEI/XML)</h2>
+					</section>
+					<section data-markdown="" data-markdown-parsed="true" class="future" style="top: 21.5px; display: none;" hidden="" aria-hidden="true"><h3 id="extract-from-tei-encoded-play">Extract from TEI-Encoded Play</h3>
+					<p><br></p>
+					<pre><code class="lang-xml hljs">(…)
+<span class="hljs-tag">&lt;<span class="hljs-name">text</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">front</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">docTitle</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">titlePart</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"main"</span>&gt;</span>Борис Годунов<span class="hljs-tag">&lt;/<span class="hljs-name">titlePart</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">docTitle</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"dedication"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Драгоценной для россиян памяти Николая Михайловича
+	 Карамзина сей труд, гением его вдохновенный, с
+	 благоговением и благодарностию посвящает<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Александр Пушкин<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+ <span class="hljs-tag">&lt;/<span class="hljs-name">front</span>&gt;</span>
+ <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"scene"</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>КРЕМЛЕВСКИЕ ПАЛАТЫ<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>(1598 года, 20 февраля)<span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">stage</span>&gt;</span>Князья Шуйский и Воротынский. <span class="hljs-tag">&lt;/<span class="hljs-name">stage</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">sp</span> <span class="hljs-attr">who</span>=<span class="hljs-string">"#vorotynskij"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">speaker</span>&gt;</span>Воротынский<span class="hljs-tag">&lt;/<span class="hljs-name">speaker</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Наряжены мы вместе город ведать,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Но, кажется, нам не за кем смотреть:<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Москва пуста; вослед за патриархом<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>К монастырю пошел и весь народ.<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Как думаешь, чем кончится тревога?<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">sp</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">sp</span> <span class="hljs-attr">who</span>=<span class="hljs-string">"#shujskij"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">speaker</span>&gt;</span>Шуйский<span class="hljs-tag">&lt;/<span class="hljs-name">speaker</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Чем кончится? Узнать немудрено:<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Народ еще повоет да поплачет,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Борис еще поморщится немного,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Что пьяница пред чаркою вина,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>И наконец по милости своей<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>Принять венец смиренно согласится,<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span>&gt;</span>А там — а там он будет нами править<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">l</span> <span class="hljs-attr">part</span>=<span class="hljs-string">"I"</span>&gt;</span>По-прежнему.<span class="hljs-tag">&lt;/<span class="hljs-name">l</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">sp</span>&gt;</span>
+(…)
+					</code></pre>
+					<p><small>(TEI-encoded drama has <code>&lt;sp&gt;</code> and <code>&lt;speaker&gt;</code> tags and machine-readable act/scene segmentation.)</small></p>
+					</section>
+					<section data-markdown="" data-markdown-parsed="true" class="future" style="top: 156px; display: none;" aria-hidden="true" hidden=""><h2 id="drama-corpora-in-tei">Корпуса драмы в TEI</h2>
+					<p>(facilitating the automated extraction of network data)</p>
+					<ul style = "font-size:80%">
+					<li><a href="http://www.theatre-classique.fr/">Théâtre Classique</a>: 1090 plays from the 17th and 18th century</li>
+					<li><a href="https://drama.earlyprint.org/">Shakespeare His Contemporaries</a>: 860 plays written between 1550 and 1700</li>
+					<li><a href="https://ger.dracor.org/">German Drama Corpus</a>: 466 German-language plays from 1730 till 1930</li>
+					<li><a href="http://www.bibliotecaitaliana.it/">Letteratura teatrale nella Biblioteca italiana</a>: 171 Italian plays</li>
+					<li><a href="https://rus.dracor.org/">Russian Drama Corpus</a>: 90 Russian-language plays from 1740s till 1940s</li>
+					<li><a href="http://www.dramawebben.se/">Dramawebben</a>: 62 Swedish plays</li>
+					</ul>
+					</section>	
+					<section>
+						<h3>Способы извлечения сети из текста</h3>
+						<ul>
+							<li>Руками!  
+							<ul>
+								<li>И это не такой уж плохой способ! </li>
+								<li>Даже программисты делают это (когда никто не видит)</li>
+							</ul>
+							</li>
+						</ul>
+					</section> -->
+					<section>
+						<h3>CSV — cамый простой формат кодирования сетей</h3>
+						<p>Source,Target,Weight</br>
+						Даня,Маша,2</br>
+						Вася,Петя,15</br>
+						Вася,Маша,1</p>
+					</section>
+					<section>
+						<h3>Gephi умеет превращать CSV в красоту</h3>
+						<img data-src="Pictures/asoiaf.png" height="500">
+						
+					</section>
+					<section>
+						<p> Эту CSV-шку можно взять <a href="https://drive.google.com/open?id=1Xc_8bNuTJb0KlhHnAxtrCvGccsS0VNCo">туть</a> </p>
+					</section>
+					
+					<!-- <section> 
+						<h3>Эту CSV-шку можно взять тут:</h3>
+						<p style="font-size:300%"><a href="https://goo.gl/oX3VDj">goo.gl/oX3VDj</a></p>
+					</section>  -->
+					<section>
+						<h3>Как можно делать такие CSV (не программируя)?</h3>
+						<ol>
+						<li>В блокноте...</li>
+						<li>В любом табличном редакторе <br>
+						(Excel / Google Sheets / LibreOffice/ OpenOffice)</li>
+						<li>Ручками в нашем <a href="https://ezlinavis.dracor.org/">Ezlinavis</a></li>
+						</ol>
+					</section>
+					<section>
+						<p> <a href="https://ezlinavis.dracor.org/">ezlinavis.dracor.org</a></p>
+					</section>
+					<section>
+						<p>Когда ваша сеть готова — импортируйте ее в Gephi</p>
+						<p> Напоминаю, что есть классная <a href="https://ancatmara.gitbooks.io/digital-literacy-for-sfl/content/seminar-11.html">инструкция</a> от Оксаны Дерезы</p>
+					</section>
+					<section>
+						<h4>Заполните Label у узлов, чтобы включить подписи</h4>
+						<img data-src="Pictures/label_to_id_0.png"> ->
+						<img data-src="Pictures/label_to_id_1.png"> ->
+						<img data-src="Pictures/label_to_id_2.png"> ->
+						<img data-src="Pictures/label_to_id_3.png"> ->
+						<img data-src="Pictures/label_to_id_4.png"> ->
+						<img data-src="Pictures/label_to_id_5.png">
+					</section>
+					<section>
+						<h3>Сделайте размер узлов пропорциональным Degree — с помощью вкладки Appearance</h3>
+						<img data-src="Pictures/appearance.png">
+					</section>
+					<section>
+						<p>Придумайте какой-нибудь атрибут ваших узлов, заполните его — и визуализируйте с помощью цвета! Шаг 1:</p>
+						<img data-src="Pictures/add_attrs.png" height="500">
+					</section>
+					<section>
+						<p>Придумайте какой-нибудь атрибут ваших узлов, заполните его — и визуализируйте с помощью цвета! Шаг 2:</p>
+						<img data-src="Pictures/add_attrs_2.png" height="500">
+					</section>
+					<section>
+						<p>Придумайте какой-нибудь атрибут ваших узлов, заполните его — и визуализируйте с помощью цвета! Шаг 3:</p>
+						<img data-src="Pictures/add_attrs_3.png" height="500">
+					</section>
+					<section>
+						<p>Придумайте какой-нибудь атрибут ваших узлов, заполните его — и визуализируйте с помощью цвета! Шаг 4:</p>
+						<img data-src="Pictures/node_color.png" height="500">
+					</section>
+					<section>
+						<p>Загрузите вашу визуализацию <a href="https://docs.google.com/forms/d/e/1FAIpQLSfJZ-ZRo_oVIc-QT5b5xumje2aO0TpO2e-Cr_UZ0dZ5I7DPUg/viewform?usp=sf_link">сюда</a></p>
+					</section>
+				
+					
+					
+					<section>
+						<h2>Продолжаем записываться на доклады!</h2>
 						<a href="https://docs.google.com/spreadsheets/d/1ZKapLBN2nO1Xm9YzS-0Z6B4KpTWdf358SAi0lA-9MZM/edit?usp=sharing">tinyurl.com/y45as9h8</a>
 					</section>
 					<section> 
