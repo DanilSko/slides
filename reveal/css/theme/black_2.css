@@ -20,6 +20,18 @@ body {
   font-weight: normal;
   color: #fff; }
 
+citation {
+
+text-align: right;
+font-size: 50%;
+}
+
+capt {
+
+font-size: 25%;
+
+}
+
 ::selection {
   color: #fff;
   background: #bee4fd;
