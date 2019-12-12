@@ -13,6 +13,12 @@ section.has-light-background, section.has-light-background h1, section.has-light
 body {
   background: #222;
   background-color: #222; }
+  
+capt {
+
+font-size: 25%;
+
+}
 
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
