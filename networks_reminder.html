@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Сетевой анализ</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white_russian.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+		<style>
+.highlight { 
+    color: orange;
+}
+</style>
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+					<section>
+						<h2>Краткая напоминалка про сети</h2>
+
+						<p style="font-size:70%" >5 февраля 2020</p>
+					</section> 
+					<!-- <section><p>Презентация доступна онлайн:</p> <p><a href="https://danilsko.github.io/slides/networks_dhmasters">danilsko.github.io/slides/networks_dhmasters</a></p></section> -->
+			
+				
+				<!-- <section id="opening">
+					<section>
+						<h3>Эту презентацию лучше не листать стрелочками</h3>
+						<p>Вперед <span style="color:blue;">ПРОБЕЛОМ</span>, назад — <span style="color:orange;">ШИФТ+ПРОБЕЛОМ</span></p>
+					</section>
+				</section> -->
+		
+
+					 <!-- <section>
+						<h2>Что сегодня будет</h2>
+						<ul>
+							<li>Введение: граф (сеть) как модель</li>
+							<li>Чем хороши сети как модель — с примерами исследований:
+							  <ul>
+							    <li>Центральности элементов</li>
+							    <li>Структурные особенности сети</li>
+							  </ul>
+							</li>
+							<li>Превращаем объект исследования в сеть: подходы и инструменты</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Сеть(граф) — универсальная абстракция</h4>
+						<img data-src="Pictures/mdh/sample.png" height ="500">
+					</section>  -->
+					<section>
+						<h3>Сеть может служить моделью для многого</h3>
+						<img data-src="Pictures/3dsample1.png" height ="500">
+					</section>
+					<section>
+						<h3>Сеть может служить моделью для многого</h3>
+						<img data-src="Pictures/3dsample2.png" height ="500">
+					</section>
+					<section>
+						<h3>Сеть может служить моделью для многого</h3>
+						<img data-src="Pictures/3dsample3.png" height ="500">
+					</section>
+					<section>
+						<h3>узлы (вершины)</h3>
+						<img style ="margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);" data-src="Pictures/networknodes.png">
+					</section>
+					<section>
+						<h3>ребра (дуги)</h3>
+						<img style ="margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);" data-src="Pictures/networkedges.png">
+					</section> 
+					<section>
+						<h3>Совсем формально:</h3>
+						  <p>Граф — это упорядоченная пара (V,E), где V— непустое множество вершин или узлов, а E — множество пар (в случае неориентированного графа — неупорядоченных) вершин, называемых рёбрами.</p>
+					</section>
+					
+					<section>
+						<h4>Это важно для работы с сетями в коде</h4>
+						<img data-src="Pictures/networkx.png" height ="500"> 
+						<br>
+						См. <a href="https://networkx.github.io">networkx.github.io</a>
+						
+					</section>
+
+					<section>
+						<h4>Простейшая визуализация графа из networkx</h4>
+						<img data-src="Pictures/networkx_viz_plt.png" height ="400"> 
+						<br>
+						См. <a href="https://networkx.github.io/documentation/stable/tutorial.html#drawing-graphs">эту часть туториала networkx</a>
+						
+					</section>
+					
+
+					<section>
+						<h3> Графы в R</h3>
+						<img data-src="Pictures/igraph.png">
+						<p> См. <a href="https://igraph.org/r/">igraph.org/r/</a></p>
+					</section>
+					<section>
+						<h4>Простейшая визуализация в R</h4>
+			      		<img data-src="Pictures/igraph_viz.png">
+			      		<br>
+			      		См. <a href="https://igraph.org/r/doc/plot.common.html">эту часть туториала igraph</a>
+			    	</section>
+
+					<section>
+						<h4>Видео: две визуализации в R</h4>
+			      		<video data-autoplay src="videos/graph_viz_r.mov">
+			      		</video>
+			      		<p>простой plot + трехмерная</p>
+			    	</section>
+
+			    	<section>
+						<h3>Окей, но визуализация — это же просто красивости! </h3>
+					    <h4>Где анализ?</h4>
+					</section>
+
+					<section>
+					    <h1>Что считаем?</h1>
+					</section>
+
+
+					  <section>
+					    <h3>1. Центральности в сетях</h3>
+					    <img data-src="Pictures/degree_demo_danya.png" height ="500">
+					  </section>
+					  <section>
+					    <table>
+					    <thead>
+					      <tr>
+					        <th>Узел</th>
+					        <th>Центральность (степень, degree)</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					      <tr>
+					        <td>Даня</td>
+					        <td style="color:red">5</td>
+					      </tr>
+					      <tr>
+					        <td>Таня</td>
+					        <td>1</td>
+					      </tr>
+					      <tr>
+					        <td>Ваня</td>
+					        <td>1</td>
+					      </tr>
+					      <tr>
+					        <td>Нафаня</td>
+					        <td>1</td>
+					      </tr>
+					      <tr>
+					        <td>Дуня</td>
+					        <td>1</td>
+					      </tr>
+					    </tbody>
+					  </table>
+					  </section>
+					  <section>
+					    <h3>Визуализация</h3>
+					    <img data-src="Pictures/degree_demo_danya_viz.png" height ="500">
+					  </section>
+					  <section>
+					    <h4>Центральность по посредничеству (betweenness centrality)</h4>
+					    <img data-src="Pictures/betweenness_demo_danya.png" height ="500">
+					  </section>
+					  <section>
+					    <h4>Центральность по посредничеству (betweenness centrality)</h4>
+					    <img data-src="Pictures/betweenness_demo_danya_viz.png" height ="500">
+					  </section>
+					  <section>
+					    <h4>Есть много разных центральностей</h4>
+					    <img data-src="Pictures/morecentralities.png" height ="500">
+					  </section>
+
+					  <section>
+					  	<h4>Центральности в питоне (networkx)</h4>
+					      <img data-src="Pictures/centralities_networkx.png">
+					  	
+					  </section>
+
+
+					  <section>
+					      <h3>Сравнение degree и betweenness</h3>
+					      <img data-src="Pictures/surveillance_all.png" height ="500">
+					      </br>
+					        <capt>Ahnert R., Ahnert S.E. Metadata, Surveillance and the Tudor State // History Workshop Journal. 2019. Т. 87. С. 27–51.
+					        </capt>
+				    	</section>
+			    
+				    <section>
+				      <h3>Промежуточность как показатель двуличности
+				      </h3>
+				      <img data-src="Pictures/snowden.png" height ="500">
+				      </br>
+				        <capt>Ahnert R., Ahnert S.E. Metadata, Surveillance and the Tudor State // History Workshop Journal. 2019. Т. 87. С. 27–51.
+				        </capt>
+				    </section>
+				    <section>
+				      <h5>Те же метрики применимы в филологии</h5>
+				      <img data-src="Pictures/hamlet.png" height ="450" >
+				        <p style="font-size:65%">Франко Моретти, «Теория сетей и анализ сюжета» (2011)</p>
+				    </section>
+				    <section> 
+				      <img data-src="Pictures/hamlet_moretti_cuts.png" height ="550" >
+				    </section>
+				    <section>
+				      <h4>Моретти говорит</h4>
+				      <p style="font-size: 75%">In quantitative terms, Claudius is almost as central as Hamlet (average distance of 1.62, versus 1.45); but in structural terms not so, when we remove him from the network (Figure 8), what happens is that a handful of peripheral characters are affected, but the network as a whole not much. Even if we remove, first Hamlet, and then Claudius, his subtraction does not do much. <span style="color: orange">But if we remove, first Hamlet, and then Horatio</span> (Figure 9), then the fragmentation is so radical that the Ghost and Fortinbras — which is to say, the beginning and the ending of the play — are completely severed from each other and from the rest of the plot. Hamlet no longer exists. And yet, Horatio is slightly less central than Claudius in quantitative terms (1.69 versus 1.62). Why is he so much more important in structural terms?” </p>
+				      <p  style="font-size: 50%">Franco Moretti. “Distant Reading”</p>
+				    </section>
+				    
+				    <section>
+				      <h5>Переведем в цифры</h5>
+				      <table>
+				        <thead>
+				          <tr>
+				            <th>Персонаж</th>
+				            <th>Степень</th>
+				            <th>Нагрузка (betweenness)</th>
+				          </tr>
+				        </thead>
+				        <tbody>
+				          <tr>
+				            <td>Гамлет</td>
+				            <td>19</td>
+				            <td>219,4</td>
+				          </tr>
+				          <tr>
+				            <td>Король (Клавдий)</td>
+				            <td>16</td>
+				            <td><span style="color:red">131,6</span></td>
+				          </tr>
+				          <tr>
+				            <td>Горацио</td>
+				            <td>14</td>
+				            <td><span style="color:green">176,7</span></td>
+				          </tr>
+				        </tbody>
+				        
+				      </table>
+				    </section>
+				    
+				  
+			    <section>
+				    <h3>Betweenness vs degree русской драме</h3>
+				    <img data-src="Pictures/godunov_weighted_degree_black.png" height ="500">
+				  </section>
+				  <section>
+				    <h3>Пушкин на посылках</h3>
+				    <img data-src="Pictures/godunov_betweenness_black.png" height ="500">
+				  </section>
+			    <section>
+			      <video data-autoplay src="videos/godunov.mp4">
+			      </video>
+			    </section>
+			    <section>
+			      <h2>Другие похожие</h2>
+			    </section>
+			    <section>
+			      <h4>Битяговский в «Смерти Иоанна Грозного» А. К. Толстого (двойной агент) </h4>
+			      <img data-src="Pictures/bityag.png" >
+			    </section>
+			    
+			    <section>
+			      <h4>Калачник в «Дмитрие Самозванце» А.Н. Островского (шпион/агент Шуйского) </h4>
+			      <img data-src="Pictures/kalachnik.png" >
+			    </section> 
+			    <section>
+			      <h3>Битков (соглядатай/двойник Пушкина)</h3>
+			      <img data-src="Pictures/bitkov.png" >
+			    </section> 
+
+			    <section>
+			    	<h2>Это все микроуровень? А что с макро?</h2>
+			    </section>
+			
+			    <section>
+			      <h3>60 британских романов: средняя степень персонажа</h3>
+			      <ul>
+			        <li>Elson, D. K., Dames, N. and McKeown, K. (2010), Extracting Social Networks from Literary Fiction, Proceedings of ACL 2010, Uppsala, Sweden.</li>
+			      </ul>
+			      <img data-src="Pictures/elson.png" height ="350">
+			        <img data-src="Pictures/elson_data.png" height ="350">
+			    </section> 
+				
+				  <section>
+				    <h3>Структурные свойства 465 немецких пьес</h3>
+				    <img data-src="Pictures/germansuperposter.png" >
+				  </section>
+				  <section>
+						<h3>Что такое плотность сети?</h3>
+					<img data-src="Pictures/lowden_gerfra.png"  height ="350">
+					<img data-src="Pictures/highden_gerfra.png"  height ="350">
+					<p>Плотность = 0.5 (3/6) &nbsp;&nbsp;&nbsp;&nbsp; Плотность = 1 (6/6)</p>
+					</section>
+
+					<section>
+						<h3>Связана ли плотность с жанром?</h3>
+						<img data-src="Pictures/density.png"  height ="500">
+					</section>
+				  <section>
+				    <h3>А что с плотностью в русском корпусе?</h3>
+				    <img data-src="Pictures/140_plays.png" height="400">
+				      <h3><a href="https://rus.dracor.org">rus.dracor.org</a></h3>
+				  </section>
+				  <section data-background-image="Pictures/140_plays.png" data-background-size="contain"></section>
+					
+					
+				  <section>
+				    <h3>Плотности комедий и не-комедий в RusDraCor</h3>
+				    <img data-src="Pictures/comedy_non_comedy_loess.png"  height ="420" >
+				      <p style="font-size:50%">предварительные данные</p>
+				  </section>
+				    
+					<section>
+						<h4>Какие русские пьесы обладают свойствами "малого мира"?</h4>
+						<img data-src="Pictures/smallworld_label_cropped.png">
+						<p>Исследование Евгении Устиновой (МИЭМ НИУ ВШЭ)</p> 
+					</section>
+
+					<section>
+						<h3>Сетевой анализ: разбиение на подзадачи</h3>
+						<h4>Применительно к DH</h4>
+					</section>
+					<section>
+					<h3>Подзадачи:</h3>
+					<ol>
+						<li>Формализовать сеть у себя в голове
+							<ol>Что у нас узел?</ol>
+							<ol>Что у нас связь?</ol>
+						</li>
+						<li>Получить данные о связях, т.е. <b>извлечь</b> сеть из источника, например, из текста / xml / html</li>
+						<li>Визуализировать, проанализировать, интерпретировать сеть (Gephi/Networkx/igraph...)</li>
+					</ol>
+					</section>
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+			controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+		</script>
+	</body>
+</html>
