@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Дальнее чтение</title>
+
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/white_russian.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			<section id="intro">
+				<section>
+				<h1 class="fragment shrink">Distant Reading</h1>
+				<p class="fragment shrink">where distance […] is a condition of knowledge (F. Moretti)</p>
+				</section>
+				<section>
+						<h3>Зачем нужно это занятие?</h3>
+						<ul>
+						<li class="fragment">Вы познакомитесь с главным buzzword'ом мира DH</li>
+						<li class="fragment">Я в краткой форме расскажу вам основные идеи из книжки Франко Моретти про Distant Reading (возможно, самая известная и точно самая спорная книга в DH)</li>
+						<li class="fragment">Мы с вами мотивируем себя на количественные исследования текстов</li>
+						<!-- <li class="fragment">Морально настроиться на практику (след.занятие)</li> -->
+						</ul> 
+				</section>
+				<section>
+						<h3>План</h3>
+						<ul>
+						<li class="fragment">Distant Reading: с чего все началось</li>
+						<li class="fragment">Distant Reading => Digital Humanities</li>
+						<li class="fragment">Как выглядел Distant Reading у Моретти</li>
+						<li class="fragment">Современные исследования в парадигме Distant Reading</li>
+						
+						<!-- <li class="fragment">Морально настроиться на практику (след.занятие)</li> -->
+						</ul> 
+				</section>
+				<section>
+					<h3>1. Distant Reading: с чего все началось</h3>
+				</section>
+
+				<section>
+					<h4>Моретти и мечты об исследовании "мировой литературы"</h4>
+
+					<p>“I think it’s time we returned to that old ambition of <i>Weltliteratur</i>: after all, the literature around us is now unmistakably a <span style=color:orange>planetary system</span>. The question is not really <i>what</i> we should do — the question is <i>how</i>. What does it mean, studying <span style=color:orange>world literature</span>? How do we do it?” 
+					</p> <citation>Moretti F. Conjectures on World Literature. New Left Review, 2000</citation>
+
+				</section>
+
+				<section>
+					<h4>Компаративистика Моретти не устроила</h4>
+
+					<p>“comparative literature has not lived up to these beginnings. It’s been a much more modest intellectual enterprise, fundamentally <span style=color:orange>limited to western Europe</span>, and mostly revolving around the river Rhine (German philologists working on French literature). Not much more.”
+					</p> <citation>Moretti F. Conjectures on World Literature. New Left Review, 2000</citation>
+
+				</section>
+
+				<section>
+					<h4>Моретти хочет объять необъятное</h4>
+						<p style="font-size:80%">I work on west European narrative between 1790 and 1930, and already feel like a charlatan outside of Britain or France. World literature?</p>
+						<p style="font-size:80%">
+						Many people have read more and better than I have, of course, but still, we are talking of hundreds of languages and literatures here. Reading ‘more’ seems hardly to be the solution. Especially because we’ve just started rediscovering what Margaret Cohen calls the ‘great unread’. ‘I work on west European narrative, etc...’ Not really, <span style=color:orange>I work on its canonical fraction, which is not even 1 per cent</span> of published literature. ”</p>
+				</section>
+
+				<section>
+					<h4>The Great Unread</h4>
+					<h4>("Великое непрочитанное")</h4>
+					<p style="font-size:80%">«Life is so short! Even if you are a bookworm and only need five days to read a book twice, you will not manage to read more than 70 per annum. And for the 45 years of receptive­ness, from age 15 to age 60, they sum up to only 3,150 books: these have to be chosen wisely!»</p>
+					<citation>Arno Schmidt: Ich bin erst sechzig (1955). In: Bargfelder Ausgabe, Werkgruppe I, Vol. 4.
+					Zurich: Haffmans 1987, pp. 30. (перевод на англ. — Франк Фишер)</citation>
+
+					<p style="font-size:80%">After we exclude serials, we can finally count all the books in the world. There are 129,864,880 of them. At least until Sunday.</p>
+					<citation><a href="http://booksearch.blogspot.com/2010/08/books-of-world-stand-up-and-be-counted.html">Books of the world, stand up and be counted! All 129,864,880 of you.</a> // Google Books Search Blog</citation>
+				</section>
+
+
+
+				<section><h4>Решение по Моретти: <span style=color:orange>Distant Reading</span> </h4>
+					<p style="font-size:80%">“you invest so much in individual texts only if you think that very few of them really matter [...] At bottom, it’s a theological exercise—very solemn treatment of very few texts taken very seriously—whereas what we really need is a little pact with the devil: <span style=color:orange>we know how to read texts, now let’s learn how not to read them</span>. Distant reading: where distance, let me repeat it, is a condition of knowledge: it allows you to focus on units that are much smaller or much larger than the text: devices, themes, tropes—or genres and systems.”</p>
+				<br><citation>Moretti F. Conjectures on World Literature. New Left Review, January 1, 2000</citation>
+				</section>
+
+				<section>
+					<h3>Вопрос к читавшим: а что там про цифровые методы-то?</h3>
+				</section>
+
+				<!-- <section>
+						<p>"Если же мы хотим выйти за пределы канона […], то пристальное чтение нам не подходит. Оно не создано для таких задач, оно создано для решения задач противоположных. […] мы умеем читать тексты, теперь нужно научиться не читать их. Дальнее чтение, для которого расстояние, повторюсь, является условием получения знаний […].»</p>
+<p><citation>Моретти Ф. Гипотезы о мировой литературе (2000; пер. с англ. Олега Собчука) // B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 83</citation></p>
+				</section> -->
+				<section>
+					<h4>Поначалу Моретти не говорил о компьютерах!</h4>
+				<p>“literary history will quickly become very different from what it is now: it will become ‘second hand’: a patchwork of other people’s research, <i>without a single direct textual reading</i>” </p><citation>Moretti F. Conjectures on World Literature. New Left Review, January 1, 2000</citation>
+				</section>
+				<section>
+				<h4>Адаптация идеи Distant Reading к цифровым методам в гуманитарных науках происходит позже</h4>
+				</section>
+				<section>
+					<h3>2. Distant Reading => Digital Humanities</h3>
+				</section>
+
+				<section>
+						<p>“Literature scholars should stop reading books, and start counting, graphing, and mapping them instead.” </p>
+<citation>Moretti F. Graphs, Maps, Trees: Abstract Models for a Literary History. London: Verso, 2005.</citation>
+						<p>Литературоведы должны прекратить читать книги и начать считать, визуализировать и картографировать их</p> 
+						<citation>Мой перевод</citation>
+				</section>
+				<section>
+				<h3>И понеслось</h3>
+				<ul>
+				<li>Многие цифровые гуманитарии подхватили идею Distant Reading</li>
+				<li>Тем более что вокруг цифровой бум 2.0 середины 2000-х </li>
+				<li>Вокруг самого Моретти появилась <a href="https://litlab.stanford.edu/">Stanford Literary Lab</a>
+				</li>
+				</ul>
+				</section>
+				<section data-background-image="https://web.stanford.edu/group/litlab/cgi-bin/wordpress/wp-content/uploads/2011/01/p11-16x9-1024x576.png"> </section>
+				<section>
+					<h4>Книга 2013 г. уже воспринималась как книга по DH</h4>
+					<img data-src="../dh_course/Pictures/distread.png" height="500">
+				</section>
+				<section>
+					<h4>Книга 2013 г. уже воспринималась как книга по DH... но не являлась таковой</h4>
+					<img data-src="../dh_course/Pictures/distread.png" height="500">
+				</section>
+				<section>
+				<ul style="font-size:80%">
+					<li  class="fragment fade-out">Глава 1. Европейская литература Нового времени: географический набросок</li>
+					<li>Глава 2. Гипотезы о мировой литературе 
+					<li>Глава 3. Литературная бойня</li>
+					<li>Глава 4. Планета Голливуд</li>
+					<li class="fragment fade-out">Глава 5. Еще гипотезы</li>
+					<li class="fragment fade-out">Глава 6. Эволюция, миросистемы, Weltliteratur</li>
+					<li class="fragment fade-out">Глава 7. Конец начала: ответ Кристоферу Прендергасту</li>
+					<li class="fragment fade-out">Глава 8. Роман: история и теория</li>
+					<li>Глава 9. Корпорация стиля: размышления о 7 тысячах заглавий (британские романы 1740–1850)</li>
+					<li>Глава 10. Теория сетей, анализ сюжета</li>
+					<!-- <li>Вместо заключения. Масштаб, смысл, паттерн, форма: концептуальные задачи, стоящие перед количественным литературоведением</li> -->
+				</ul>
+				</section>
+
+			<section>
+					<h3>3. Как выглядел Distant Reading у Моретти</h3>
+			</section>
+
+				<section>
+				<h2>Гипотезы о мировой литературе</h2>
+				</section>
+				<section>
+				<h4>Гипотезы о мировой литературе</h4>
+				<ul>
+					<li>Моретти задается вопросом, как изучать "мировую литературу"</li>
+					<li>Литературные сверхдержавы ("центр") и их влияние на литературную "периферию"</li>
+					<li>"Волны" мировой литературы и "деревья" национальных литератур</li>
+					<li>Проблема масштаба — и великого непрочитанного (The Great Unread)</li>
+					<li>Идея Дальнего чтения как возможное решение</li>
+				</ul>
+				</section>
+				<section>
+				<!--<h5>Гипотезы о мировой литературе</h5> -->
+				<p style="font-size:80%">«"Я занимаюсь западноевропейской прозой..." Это не совсем так, потому что я занимаюсь лишь канонизованной ее частью, которая составляет меньше 1 процента всей изданной литературы. Опять же, многие читали больше, но дело в том, что у нас есть 30 тысяч британских романов XIX в., или 40, 50, 60 тысяч — никто не знает точно, никто их не читал и никогда не будет читать. А ведь есть еще и французские романы, а также китайские, аргентинские, американские... Это хорошая мысль — читать «больше», но так мы не решим эту проблему».
+				</p>
+				<p><citation>Моретти Ф. Гипотезы о мировой литературе (2000; пер. с англ. Олега Собчука) // B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 79</citation></p>
+				</section>
+				<section>
+				<h5>Distant Reading без мысли о компьютере</h5> 
+				<p style="font-size:65%">
+					"Меня заинтересовал тот факт, что одна и та же ситуация могла сложиться в таких разных культурах, как индийская и японская. Мне стало еще любопытнее, когда я понял, что Роберто Шварц самостоятельно открыл очень похожий принцип в случае с Бразилией. В итоге я начал использовать эти отрывочные факты в своих размышлениях о связи между рынками и формами и, сам того не замечая, стал воспринимать идею Джеймисона в качестве <span style=color:orange>закона литературной эволюции</span> (нужно быть предельно осторожным с заявлениями подобного рода, но даже не знаю, как выразиться иначе): в культурах, находящихся на периферии литературной системы (то есть почти во всех культурах как в Европе, так и за ее пределами) роман современного типа возникает не как самостоятельное изобретение, а как компромисс между западными формальными влияниями (как правило, французскими или английскими) и местным материалом".
+				</p>
+				<p><citation>Моретти Ф. Гипотезы о мировой литературе (2000; пер. с англ. Олега Собчука) // B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 85</citation></p>
+				</section>
+				<section>
+				<p style="font-size:80%">
+						Эта первоначальная идея разрослась, превратившись в небольшой набор законов, и все это было очень занятно, однако... она оставалась всего лишь идеей, гипотезой, которую еще нужно было проверить, по возможности на обширном материале, и поэтому я решил проследить за волной распространения современного романа (примерно с 1750 по 1950 г.) на страницах исследований по истории литературы. 
+				</p>
+				<p><citation>Моретти Ф. Гипотезы о мировой литературе (2000; пер. с англ. Олега Собчука) // B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 85-86</citation></p>
+				</section>
+
+
+				<section>
+				<p style="font-size:70%">
+				Гасперетти и Гощило в работах о Восточной Европе конца XVIII в.; Тоски и Марти Лопес — о Южной Европе начала XIX в.; Франко и Соммер — о Латинской Америке середины XIX в.;Фриден — о еврейских романах 1860-х гг.; Мооса, Саид и Аллен — об арабских романах 1870-х гг.; Эвин и Парла — о турецких романах того же времени; Андерсон — о филиппинском «Не прикасайся ко мне» 1887 г.; Жао и Ван о прозе Империи Цин начала века; Обечина, Иреле и Куайсон — о западноафриканских романах 1920–1950-х гг. (и, конечно же, Каратани, Миёси, Мукерджи, Эвен-Зохар и Шварц). <span style=color:orange>Четыре континента, 200 лет, более 20 независимых друг от друга литературоведческих исследований</span>, и все они сходятся в следующем: когда определенная культура начинает двигаться в сторону романа современного типа, он обязательно оказывается компромиссом между заимствованными формами и местным материалом
+ 
+				</p>
+				<p><citation>Моретти Ф. Гипотезы о мировой литературе (2000; пер. с англ. Олега Собчука) // B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 85-86</citation></p>
+				</section>
+
+				<section>
+				<h2>Литературная бойня</h2>
+				</section>
+				<section>
+				<h4>Литературная бойня</h4>
+				<ul>
+					<li>Как случилось так, что Конан Дойля читают все, а 99% детективов второй половины XIX века забыты?</li>
+					<li>Есть ли здесь естественный отбор - и какие признаки обеспечивают "выживание сильнейшего"?</li>
+					<li>Моретти со студентами ставит эксперимент по формализации улик в текстах</li>
+				</ul>
+				</section>
+				<section>
+				<ul>
+				<li>«<...>если мы включим в сегодняшний канон британских романов XIX в. 200 названий (очень большое число), они составят всего лишь около 0,5 процента всех опубликованных тогда романов. А что остальные 99,5 процента? Это и есть вопрос этой статьи»</li>
+				<li>«Литература как бойня. А мясники на ней — сами читатели, которые читают роман A (но не B, C, D, E, F, G, H ...) и так поддерживают жизнь А в следующем поколении»</li>
+				</ul>
+				<citation>Моретти Ф. Литературная бойня (2000; пер. с англ. Алексея Вдовина) // B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 106, 108</citation>
+				</section>
+				<section>
+			<p>«<...>почему Конан Дойла выбирают в первую очередь? Почему именно его, а не других? Это мертвая зона экономической модели: событие, запускающее «информационный каскад», непознаваемо. Оно там, оно должно быть там, или рынок не будет вести себя так, как ведет, но это не может быть объяснено. Зрители «открывают, что им нравится», но мы никогда не откроем, почему им это нравится. Они — слепые создатели канона, каким бы он ни был».</p>
+			<citation>Моретти Ф. Литературная бойня (2000; пер. с англ. Алексея Вдовина)// B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 112</citation>
+				</section>
+				<section>
+				<img  data-src="../Pictures/moretti_clues.png" height = 600>
+				</section>
+				<section>
+					<ol>
+						<li>Улики есть </li>
+						<li>Улики имеют связь с разгадкой </li>
+						<li>Улики упоминаются по ходу действия, а не только в конце </li>
+						<li>Читатель сопсобен дешифровать улики раньше развязки </li>
+					</ol>
+				</section>
+
+
+				<section>
+					<p style="font-size:80%">Конан Дойл наткнулся на улики, когда работал над совершенно другой задачей — мифом о Шерлоке Холмсе. Задумайтесь над начальными сценами «Приключений...», когда Холмс «читает» всю жизнь по знакам на теле клиента. Конан Дойл хочет от улик, чтобы они работали на поддержание всеведения Холмса. Они — функция Холмса, его атрибут, подобно кокаину и скрипке. Когда Конан Дойл начинает «играть» с уликами и в итоге превращает их из простого орнамента в механизм решения головоломки, он находит им новое применение </p>
+					<citation>Моретти Ф. Литературная бойня (2000; пер. с англ. Алексея Вдовина)// B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 118</citation>
+				</section>
+
+				<section>
+					<p style="font-size:80%">Когда мы впервые посмотрели на эти результаты на семинаре, мы с трудом могли в них поверить. Конан Дойл так часто прав — и вдруг теряет хватку в самый последний момент? Он находит эпохальный формальный прием, но не разрабатывает его? [...] в моменты морфологических изменений, какими 1890-е гг. были для детектива, конкретный писатель ведет себя так же, как и жанр в целом: нерешительно. В момент смены парадигмы никто не знает, что сработает, а что нет, — ни Эшдаун, ни Пэркис, ни Конан Дойл; он продолжал писать методом проб и ошибок</p>
+					<citation>Моретти Ф. Литературная бойня (2000; пер. с англ. Алексея Вдовина)// B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 118</citation>
+				</section>
+
+				<section>
+				<h2>Планета Голливуд</h2>
+				</section>
+				<section>
+				<h4>Планета Голливуд</h4>
+				<ul>
+					<li>Одинаково ли распространяются по миру голливудские фильмы?</li>
+					<li>Моретти говорит, что боевики распространяются легко, комедии — тяжело</li>
+					<li>Связывает это с тем, что боевик менее связан с языком</li>
+				</ul>
+				</section>
+				<section>
+					<p style="font-size:80%">«Планета Голливуд» задумывалась как короткий текст, и анализ в ней не очень глубокий. Однако очевидная асимметрия между двумя тенденциями — боевики, распространявшиеся повсюду, и комедии, почти никуда не распространявшиеся, — привлекла мое внимание. В этой статье я объясняю такое различие, с одной стороны, преобладанием сюжета (боевик), а с другой — преобладанием языка (комедия), что является правдой и, по сути, не таким уж и большим открытием: нарратологи уже давно определили, что рассказ состоит из двух отдельных уровней — рассказа и стиля. Однако новизна состоит в прозрачности эмпирического доказательства: сюжет и стиль очевидным образом разделяются в результате перемещения в пространстве (или же отсутствия такового)». </p>
+					<citation>Моретти Ф. Планета Голливуд (2000; пер. с англ. Алексея Вдовина)// B: Моретти Ф. Дальнее чтение. Москва, 2016, стр. 112</citation>
+				</section>
+				<section>
+				<h2>Корпорация стиля</h2>
+				</section>
+				<section>
+				<p>«Основная метаморфоза названий XVIII  в. проста: за время жизни двух поколений они становятся намного короче».</p>				
+				<img data-src="../dh_course/Pictures/shortening2.png" height="400">
+				</section>
+				<section>
+				<h4>А как выглядели длинные?</h4>
+				<p style="font-size:80%">"Письмо от Х—г—г, эсквайра, одного из лордов опочивальни, к молодому шевалье и единственному человеку из его свиты, сопровождавшему его во время долгого путешествия от Авиньона по Германии и другим местам; содержит множество замечательных и чувствительных происшествий, случившихся с П — в его таинственном странствии. Близкому другу."</p> 
+<p style="font-size:80%">(A letter from H—g—g, Esq; One of the Gentlemen of the Bedchamber to the Young Chevalier, And the Only Person of his Retinue that attended him from Avignon, in his late Journey through Germany, and elsewhere)</p>
+				</section>
+				<section>
+				<img data-src="../dh_course/Pictures/longname.png">
+				</section>
+				<section>
+				<p>«Сегодня это звучит странно, но на самом деле краткий пересказ в начале романа имеет смысл: роман — это повествование, а заглавие (в случае с титульным листом можно понять, зачем книге требовалась целая страница для титула) в качестве пересказа было укороченным  повествованием — оно представляло основные события истории, персонажей, место действия, концовку. Это имело смысл». </p>
+				</section>
+				<section>
+				<p>«<...> культурная экосистема изменялась таким образом, что становилась несовместимой с этими принципами: на протяжении XVIII в. количество  опубликованных романов в Британии существенно выросло <...>» </p>
+				</section>
+				<section>
+				<p>«В третьей и особенно в четвертой четверти XVIII  в. Monthly и другие журналы стали печатать рецензии на многочисленные новые романы, что сделало заглавия-пересказы в некотором смысле избыточными <...>» </p>
+				</section>
+				<section>
+				<p>«Кроме того, поскольку количество новых романов продолжало расти, временное окно для представления каждого из них на рынке сузилось, и для названия стало жизненно необходимым быстро и эффективно привлекать внимание публики. Пересказы не были для этого приспособлены. Они хорошо описывали книгу саму по себе, однако, когда дело касалось переполненного рынка, короткие заглавия справлялись лучше — хотя бы потому, что их было легче запомнить».</p>
+				</section>
+				<section>
+				<h2>Корпорация стиля: лингвистические особенности заглавий</h2>
+				</section>
+				<section>
+				<h3>1. Заглавия с прилагательными и без</h3>
+				<p>«Никакой» вампир против неприличной жены</p>
+				</section>
+				<section>
+				<p style="font-size:80%">«<...>оказалось, что прилагательное вовсе не уточняет семантическое поле, оно его трансформирует. В комбинации артикль-существительное половина заглавий, описывающих социальный тип, относится к экзотическому трансгрессивному полю — «Факир», «Вампир», «Пожиратель огня»</p>
+				<p style="font-size:80%">«Однако стоит только появиться прилагательному, соотношение оказывается прямо противоположным (рис.11): факиры и распутники падают с 50 до 20%, а жены и дочери поднимаются с 16 до 40%: «Неприличная жена», «Брошенная дочь», «Неверный отец», «Братья-соперники», «Посмертно рожденная дочь», «Ложный друг», «Безумный отец»</p>
+				</section>
+
+				<section>
+				<img data-src="../Pictures/styleinc_adjectives.png">
+				</section>
+				<section>
+				<p>«Без прилагательных мы находимся в мире приключений, а с прилагательными — в нарушенном домашнем укладе. <...> если в названии присутствует только существительное, то это существительное должно гарантировать интересную историю само по себе, и вампиры, и отцеубийцы в этом случае являются хорошим выбором. Однако когда появляется прилагательное, то даже хорошо знакомые фигуры могут стать чуждыми, превратившись в неверных отцов и посмертно рожденных дочерей».</p>
+				</section>
+				<section>
+				<h3>2. Женщины в заглавиях обретают фамилии</h3>
+				</section>
+				<section>
+				<img data-src="../Pictures/styleinc_womensurnames.png">
+				</section>
+				<section>
+				<p style="font-size:90%">«<...>героиня приобретала общественное положение, сразу отражающееся в названиях вроде «Джейн Эйр» или «Мэри Бартон». Обратите внимание, как много может быть сделано в коротких заглавиях благодаря небольшим вариациям: одно слово — и образ героини переворачивается на 180 градусов: от частного к публичному. Короткие названия были ограничением, навязанным рынком, да, но ограничение могло также стать замечательной возможностью для литературного воображения: искусство намека, сжатости — в конце концов заглавие становилось тропом».</p>
+				</section>
+				<section>
+				<h3>3. The X of Y</h3>
+				</section>
+				<section>
+				<img data-src="../Pictures/xofy1.png">
+				</section>
+				<section>
+				<img data-src="../Pictures/xofy2.png">
+				</section>
+			</section>
+			<section id = "some_more_examples">
+				<section>
+				<h2>Примеры исследований в парадигме Distant Reading</h2>
+				</section>
+				<section>
+					<h4>Канон против "архива" (неканона)</h4>
+					<img src ="https://web.stanford.edu/group/litlab/cgi-bin/wordpress/wp-content/uploads/2011/01/p11-16x9-1024x576.png">
+					<citation><a href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">litlab.stanford.edu/LiteraryLabPamphlet11.pdf</a></citation>
+				</section>
+
+				<section>
+					<h4>Вдохновение: карта французской литературы П. Бурдье</h4>
+
+					<img data-src="../Pictures/minor2021/bourdieus-french-literary-field.png">
+				</section>
+
+
+				<section>
+
+				<h4>Основательный подход к сборке репрезентативной выборки</h4>
+
+				<p style="font-size:80%">"Though our corpus was twenty times larger than the traditional canon, then, it was perfectly possible that its principle of selection would make it resemble the canon much more than the archive as a whole. That was the problem. To complicate matters further, different genres have different canon-to-archive ratios: whereas epistolary and silver-fork novels have relatively large archives and small canons, the opposite is true of the industrial novel and the Bildungsroman, both of which attracted many major Victorian writers".</p>
+				<citation><a href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">litlab.stanford.edu/LiteraryLabPamphlet11.pdf</a></citation>
+
+				</section>
+
+				<section>
+
+				<h4>C выборкой оказалось сложно </h4>
+
+				<p style="font-size:80%">"this was a search involving many excellent librarians in London, Cambridge, Los Angeles, and of course at Stanford; a half dozen researchers at the Literary Lab; plus people at Hathi, Gale, and so on. The books we were looking for were only two centuries old; they had had print runs of at least 750-1,000 copies, and in a part of the world which, at the time, already possessed efficient libraries. The Literary Lab has some money for research [...] . And yet <span style=color:orange>it took about six months</span> to receive from Hathi and Gale the set of texts that should have allowed us to move from the initial 30%, to <span style=color:orange>around 70-80% of the random sample".</span></p>
+				<citation><a href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">litlab.stanford.edu/LiteraryLabPamphlet11.pdf</a></citation>
+
+				</section>
+
+
+
+				<section>
+					<p>"Clearly, the idea that digitization has made everything available and cheap – let alone “free” – is a <span style=color:orange>myth</span>".</p>
+
+					<h5>Но они продолжили, потому что:</h5>
+
+					<p>"Dirty hands are better than empty".</p>
+
+					<citation><a href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">litlab.stanford.edu/LiteraryLabPamphlet11.pdf</a></citation>
+
+				</section>
+
+				<section>
+					<h4>Избыточность (предсказуемость) текста:</h4>
+					<img data-src="../Pictures/minor2021/redundancy.png">
+		
+					<citation><a href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">litlab.stanford.edu/LiteraryLabPamphlet11.pdf</a></citation>
+
+				</section>
+
+				<section>
+					<img data-src="../Pictures/minor2021/redundancy2.png">
+		
+					<citation><a href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">litlab.stanford.edu/LiteraryLabPamphlet11.pdf</a></citation>
+
+				</section>
+
+				<section>
+					<h4>Возможно, авторы, вошедшие в канон, писали <span style=color:orange>менее предсказуемые</span> тексты (на уровне выбора слов)</h4>
+				</section>
+
+				<section>
+					<h4>Разнообразие вокабуляра:</h4>
+					<img data-src="../Pictures/minor2021/typetoken.png" height="500">
+					<p><citation><a href="https://litlab.stanford.edu/LiteraryLabPamphlet11.pdf">litlab.stanford.edu/LiteraryLabPamphlet11.pdf</a></citation></p>
+
+				</section>
+
+				<section>
+					<h4>Возможно, авторы, вошедшие в канон, писали <span style=color:orange>менее предсказуемые</span> тексты (на уровне выбора слов), используя при этом <span style=color:orange>меньше разных слов!</span></h4>
+				</section>
+
+				
+
+				<section>
+						<h3>465 немецких пьес</h3>
+						<h4></h4>
+						<img data-src="../Pictures/germansuperposter.png" >
+					</section>
+
+					<section>
+					<h4>Смотрим на социальные сети пьес с высоты</h4>
+						<img data-src="../Pictures/reigen.png" >
+					</section>
+					<section>
+					<h4>Смотрим на социальные сети пьес с высоты</h4>
+						<img data-src="../Pictures/goethe.png" >
+					</section>
+					<section>
+					<h3>Гёте и Шекспир</h3>
+						<img data-src="../Pictures/inostr/Gotz.png" height="400">
+						<img data-src="../Pictures/inostr/HenryVIII.png" height="400">
+					</section>
+					<section>
+						<h3>Теперь смотрим на русский корпус</h3>
+						<img data-src="../Pictures/140_plays.png" height="550">
+					</section>
+					<section>
+						<h3>Это Борис Годунов А.С. Пушкина! (опять)</h3>
+						<img data-src="../Pictures/pictures_cameraready/zoom_godunov.png" >
+					</section>
+					<!-- <section>
+						<h3>Посмотрим на эту пьесу</h3>
+						<img data-src="../Pictures/betweenness-pushkin-boris-godunov.png" height="500">
+					</section> -->
+					<section>
+						<h3>Что-то похожее на Гёте</h3>
+						<img data-src="../Pictures/goethe.png" >
+					</section>
+					<section>
+						<p>"Не смущаемый никаким иным влиянием, Шекспиру я подражал в его вольном и широком изображении характеров, в небрежном и простом составлении планов…"</p>
+					<citation>А. С. Пушкин. Собрание сочинений в десяти томах. Том 6. Критика и публицистика, c. 300</citation>
+
+					</section>
+					<section>
+					<p style="font-size: 85%">"Твердо уверенный, что устарелые формы нашего театра требуют преобразования, я расположил свою трагедию по системе Отца нашего Шекспира, и принес ему в жертву пред его алтарь два классические единства, и едва сохранил последнее".</p>
+					<citation>А. С. Пушкин. Собрание сочинений в десяти томах. Том 6. Критика и публицистика, c. 250</citation>
+					</section>
+
+					
+					<section>
+						<h4>Классицизм против "шекспировской пьесы": взгляд через сети</h4>
+						<img data-src="../Pictures/sumarokov.png" height="420">
+						<img data-src="../Pictures/godunov.png" height="420">
+					</section>
+				<section>
+					<h4>Через что характеризуют мужчин и женщин</h4>
+
+					<img src="https://tedunderwood.files.wordpress.com/2016/01/heartmind.jpeg?w=580">
+					<p style="font-size: 50%"> чем выше линия — тем более "о мужчинах" это слово в литературе </p>
+				</section>
+				<section>
+					<h4>Подсчеты слов в 50 тысяч романов</h4>
+					<img data-src="../Pictures/mclure.png">
+					<citation>McClure D. W.  (2018) <a href="https://dh2018.adho.org/distributions-of-function-words-across-narrative-time-in-50000-novels/">Distributions Of Function Words Across Narrative Time In 50,000 Novels</a>. Digital Humanities 2018: Book of Abstracts / Libro de resúmenes.</citation>
+				</section>
+			</section> 
+			
+			
+			
+			</div>
+		</div>
+
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+			defaultTiming: 120,
+			controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+			
+		</script>
+	</body>
+</html>
