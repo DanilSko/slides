@@ -72,7 +72,8 @@ body {
 citation {
 
 text-align: right;
-font-size: 50%;
+line-height: 1;
+font-size: 20%;
 }
 
 /*********************************************
