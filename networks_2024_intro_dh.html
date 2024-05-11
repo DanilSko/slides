@@ -45,12 +45,12 @@
      </section>
     </section>
     <section id="intro">
-     <section>
+     <section data-background-image="Pictures/inostr/v1p1opacity20.png"  data-background-size="contain">
       <h2>
        Сетевой анализ и гуманитарии
       </h2>
       <p style="font-size:70%">
-       11 мая 2024
+       Критическое введение в DH, 11 мая 2024
       </p>
      </section>
      <section>
@@ -61,27 +61,16 @@
        <li>
         Введение: сеть (граф) как универсальная модель
        </li>
-       <li>
+       <li class="fragment fade-up">
         Графы и люди: приход сетей в социальные науки
        </li>
-       <li>
-        Когда и чем полезны сети в гуманитарных науках:
-        <ul>
-          <li>
-          Ловля шпионов в сетях исторических переписок
-         </li>
-         <li>
-          Центральности персонажей А.С. Пушкина и Л.Н. Толстого
-         </li>
-         <li>
-         Соцсети в средневековой Шотландии и Флоренции времен Медичи
-         </li>
-          <li>
-         Отслеживаем эволюцию драмы через сетевой (макро)анализ
-         </li>
-        </ul>
+       <li class="fragment fade-up">
+        Ловля шпионов в сетях переписок и удачные связи семьи Медичи: исторические сети 
        </li>
-       <li>
+       <li class="fragment fade-up">
+        Шекспир, Гёте, Пушкин и эволюция драмы, а также пара слов о сетях "Войны и мира": графы в филологии 
+       </li>
+       <li class="fragment fade-up">
         Практическая сторона: подходы и инструменты
        </li>
       </ul>
@@ -90,10 +79,10 @@
       <h3>
        Начало теории графов
       </h3>
+      <img data-src="Pictures/euler_port.jpg"  height="500">
       <img data-src="Pictures/euler_original.png"  height="500" />
-      </br>
-      <citation>Leonhardus Eulerus. Solutio problematis ad geometriam situs pertinentis / Commentarii academiae scientiarum Petropolitanae. 8 (1736). 1741. P. 128 (воспр. по: Фляйшнер Г. Эйлеровы графы и смежные вопросы, 2002, с. 17)
-      </citation>
+      <p style="font-size:30%">Leonhardus Eulerus. Solutio problematis ad geometriam situs pertinentis / Commentarii academiae scientiarum Petropolitanae. 8 (1736). 1741. P. 128 (воспр. по: Фляйшнер Г. Эйлеровы графы и смежные вопросы, 2002, с. 17)
+      </p>
      </section>
      <section>
       <p>"Весь мой метод основан на надлежащих обозначениях для отдельных
@@ -103,8 +92,8 @@
        прохождение моста символом AB. Первая буква обозначает область, из 
        которой путешественник вышел, а вторая буква —ту область, в которую он 
        попадает, пройдя по мосту".</p>
-      <citation>Leonhardus Eulerus. Solutio problematis ad geometriam situs pertinentis / Commentarii academiae scientiarum Petropolitanae. 8 (1736). 1741. P. 128 (воспр. по: Фляйшнер Г. Эйлеровы графы и смежные вопросы, 2002, с. 27)
-      </citation>
+      <p style="font-size:30%">Leonhardus Eulerus. Solutio problematis ad geometriam situs pertinentis / Commentarii academiae scientiarum Petropolitanae. 8 (1736). 1741. P. 128 (воспр. по: Фляйшнер Г. Эйлеровы графы и смежные вопросы, 2002, с. 27)
+      </p>
      </section>
      <!-- <section>
       <h2>
@@ -127,9 +116,9 @@
       <h3>
        Сеть может служить моделью для многого
       </h3>
-      <img data-src="Pictures/mdh/sample_0 copy.png" height="500"/>
+      <img data-src="Pictures/mdh/sample_0_blackfont.png" height="500"/>
      </section>
-     <!-- <section>
+     <section>
       <h3>
        Примеры транспортных сетей
       </h3>
@@ -137,18 +126,18 @@
       <img data-src="Pictures/mosmetro.png" height="200"/>
       <img data-src="Pictures/yandexmetropath.png" height="300"/>
       <img data-src="Pictures/datanetwork.png" height="200"/>
-     </section> -->
-     <section>
-      <h3>
-       Сеть может служить моделью для многого
-      </h3>
-      <img data-src="Pictures/mdh/sample_1 copy.png" height="500"/>
      </section>
      <section>
       <h3>
        Сеть может служить моделью для многого
       </h3>
-      <img data-src="Pictures/mdh/sample_2 copy.png" height="500"/>
+      <img data-src="Pictures/mdh/sample_1_blackfont.png" height="500"/>
+     </section>
+     <section>
+      <h3>
+       Сеть может служить моделью для многого
+      </h3>
+      <img data-src="Pictures/mdh/sample_2_blackfont.png" height="500"/>
      </section>
      <!--<section>
       
@@ -168,7 +157,7 @@
     <section id="network_architecture">
      <section>
       <h2>
-       Архитектура сети
+       Из чего состоит эта модель?
       </h2>
       <h3>
        И что нам в ней важно
@@ -373,27 +362,12 @@
       <img data-src="Pictures/tribalnetwork.png" height="400">
      </section>
      <section>
-      <h3>Центральности!</h3>
-      <img data-src="Pictures/centrality.png" height="400" >
-      <p class="fragment fade-up">Степень A = 5</p>
-     </section>
-     <section>
       <h4>Хрестоматийный пример про извлечение сообществ: Karate Club (1972)</h4>
       <ul>
        <li>Антрополог Уэйн Зэкэри (Wayne Zachary) изучал небольшой карате-клуб с 1970 по 1972</li>
        <li>Он записывал неформальные связи между участниками за пределами клуба</li>
-       <li>Во время исследования случился конфликт между руководством и инструктором </li>
       </ul>
       <!-- During the study a conflict arose between the administrator "John A" and instructor "Mr. Hi" (pseudonyms), which led to the split of the club into two.-->
-     </section>
-     <section>
-      <h3>Karate Club</h3>
-      <ul>
-       <li>Половина участников ушла вместе с инструктором делать новый клуб</li>
-       <li>Вторая половина осталась (или совсем бросила карате)</li>
-       <li>Зэкэри написал программу, которая на основе собранных до раскола данных пытается предугадать границы раскола группы</li>
-       <li><a href="http://www1.ind.ku.dk/complexLearning/zachary1977.pdf">Ссылка на статью Зэкэри (1977)</a></li>
-      </ul>
      </section>
      <section>
       <h3>Матрица (таблица) связей — исходные данные Зэкэри</h3>
@@ -405,8 +379,20 @@
       <img data-src="Pictures/karateviz.png" height="500">
      </section>
      <section>
-      <h3>Моя визуализация сети Karate Club</h3>
-      <img data-src="Pictures/karate2.png" >
+      <h3>Karate Club</h3>
+      <ul>
+       <li>Во время исследования случился конфликт между руководством и инструктором </li>
+       <li>Половина участников ушла вместе с инструктором делать новый клуб</li>
+       <li>Вторая половина осталась (или совсем бросила карате)</li>
+       <li>Зэкэри написал программу, которая на основе собранных до раскола данных пытается предугадать границы раскола группы</li>
+       <li><a href="http://www1.ind.ku.dk/complexLearning/zachary1977.pdf">Ссылка на статью Зэкэри (1977)</a></li>
+      </ul>
+     </section>
+
+     <section>
+      <h4>Моя визуализация сети Karate Club с результатом автоматической кластеризации (цвет)</h4>
+      <img data-src="Pictures/karate2.png" height="400">
+      <p style="font-size:50%">Подпись — реальное деление (Officers' -- остались в клубе с новым руководством, Mr Hi's — ушли)</p>
      </section>
      <section>
       <h3>Сила слабых связей (1973)</h3>
@@ -414,12 +400,11 @@
       </br>
       <citation>Granovetter, M. S. (1973). The Strength of Weak Ties. American Journal of Sociology, 78(6), 1360–1380. http://www.jstor.org/stable/2776392</citation>
      </section>
-     
      <section>
       <h4>
        В 1990-е и 2000-е cоциологи пошли вперед — к электронным соцсетям
       </h4>
-      <img data-src="Pictures/vk.png" height="550"/>
+      <img data-src="Pictures/me_vk_newer.png" height="550"/>
      </section>
      <section>
       <h4>
@@ -436,7 +421,86 @@
     <section id="history">
      <section>
       <h4>
-       Исторические соцсети: переписка Тюдоров
+       Связи семьи Медичи (1993)
+      </h4>
+      <ul style="font-size:80%;">
+       <li>Padgett, J. F., & Ansell, C. K. (1993). Robust Action and the Rise of the Medici, 1400-1434. American Journal of Sociology, 98(6), 1259–1319.</li>
+       <li>Объект исследования: олигархические семьи/кланы средневековой Флоренции ('<i>We analyze the centralization of political parties and elite networks that underlay the birth of the Renaissance state in Florence</i>')</li>
+       <li>Узлы: семьи/кланы (Альбицци, Альберти, Медичи, Рондинелли, Перуцци..)</li>
+       <li>Связи: межсемейный брак, разные типы экономических отношений</li>
+      </ul>
+     </section>
+     <section>
+      <h4>
+       Связи семьи Медичи (1993): источник данных
+      </h4>
+      <img data-src="Pictures/medici_data_source.jpg" height="470"/>
+     </section>
+     <section>
+      <h4>
+       Связи семьи Медичи (1993): сети браков между семьями
+      </h4>
+      <img data-src="Pictures/medici_network_1993.png" height="450"/>
+      <p style="font-size:50%;">Padgett, J. F., & Ansell, C. K. (1993). Robust Action and the Rise of the Medici, 1400-1434. American Journal of Sociology, 98(6), 1259–1319.</p>
+     </section>
+     <section>
+      <p>
+       Вывод авторов: Медичи пришли к власти, стратегически правильно (с т.з. сетей) организовывая браки 
+      </p>
+      <img data-src="Pictures/medici_result_1993.png" height="370"/>
+      <p style="font-size:50%;">Padgett, J. F., & Ansell, C. K. (1993). Robust Action and the Rise of the Medici, 1400-1434. American Journal of Sociology, 98(6), 1259–1319.</p>
+     </section>
+     <section> 
+      <h4>
+       Более свежая версия исследования флорентических сетей (2021)
+      </h4>
+      <p>But how did the Medici gain this position?
+       There are many stories of riots, plots, bribes, exiles, executions, etc. that we find in the piles of history books—but of course we also find them in Machiavelli’s “History of Florence.” However, there is <span class="fragment highlight-red">not as visible a history</span> of the <span  class="fragment highlight-red">underlying business networks and family ties</span>, of coalition formation, of cooperation, and of discrimination that indeed enabled the Medici’s political domination.
+      </p>
+      <p style="font-size:30%;">Holler, M. J., & Rupp, F. (2021). Power in Networks: The Medici. Homo Oeconomicus: Journal of Behavioral and Institutional Economics, 38(1), 59–75.
+      </p>
+     </section>
+     <section>
+      <h4>
+       Более свежая версия исследования флорентических сетей (2021)
+      </h4>
+      <img data-src="Pictures/medici_network_2021.png" height="470"/>
+      <p style="font-size:30%;">Holler, M. J., & Rupp, F. (2021). Power in Networks: The Medici. Homo Oeconomicus: Journal of Behavioral and Institutional Economics, 38(1), 59–75.
+      </p>
+     </section>
+     <section>
+      <h4>
+       Более свежая версия исследования флорентических сетей (2021)
+      </h4>
+      <img data-src="Pictures/medici_table_2021.png" height="470"/>
+      <p style="font-size:30%;">Holler, M. J., & Rupp, F. (2021). Power in Networks: The Medici. Homo Oeconomicus: Journal of Behavioral and Institutional Economics, 38(1), 59–75.
+      </p>
+     </section>
+     <section>
+      <h4>
+       Более свежая версия исследования флорентических сетей (2021)
+      </h4>
+      <img data-src="Pictures/medici_network_complex_2021.png" height="470"/>
+      <p style="font-size:30%;">Holler, M. J., & Rupp, F. (2021). Power in Networks: The Medici. Homo Oeconomicus: Journal of Behavioral and Institutional Economics, 38(1), 59–75.
+      </p>
+     </section>
+     <section>
+      <h4>
+       Более свежая версия исследования флорентических сетей (2021)
+      </h4>
+      <img data-src="Pictures/medici_network_power_index_2021.png" height="470"/>
+      <p style="font-size:30%;">Holler, M. J., & Rupp, F. (2021). Power in Networks: The Medici. Homo Oeconomicus: Journal of Behavioral and Institutional Economics, 38(1), 59–75.
+      </p>
+     </section>
+
+     <section> 
+      <p>We use the Public Good (Power) Index and the Public Value to rank the marriages of business relations of 15 elite families in fifteenth century Florence—with a <span class="fragment highlight-red">focus on the networks of the Medici and the taking of power by Cosimo de’ Medici</span>. Theoretical <span class="fragment highlight-red">analysis supports the outstanding position of the Medici family and explains much of its historical success</span>.</p>
+      <p style="font-size:30%;">Holler, M. J., & Rupp, F. (2021). Power in Networks: The Medici. Homo Oeconomicus: Journal of Behavioral and Institutional Economics, 38(1), 59–75.
+      </p>
+     </section>
+     <section>
+      <h4>
+       Исторические соцсети: переписка Тюдоров (2019)
       </h4>
       <img data-src="Pictures/surveillance.png" height="470"/>
       </br>
@@ -530,13 +594,37 @@
        
       </citation>
      </section>
+     <section>
+      <h3>
+       Соцсети пиратов
+      </h3>
+      <img data-src="Pictures/SeaDogsChoic.png" height="470"/>
+     </section>
+     <section>
+      <h3>
+       Соцсети пиратов
+      </h3>
+      <img data-src="Pictures/SeaDogsWiki.png" height="470"/>
+     </section>
+     <section>
+      <h3>
+       Соцсети пиратов
+      </h3>
+      <img data-src="Pictures/SeaDogsNetworks.png" height="470"/>
+     </section>
+     <section>
+      <h3>
+       Соцсети дипломатов
+      </h3>
+      <img data-src="Pictures/diplomats2.png" height="470"/>
+     </section>
     
     </section>
     
     <section id="fictional_networks">
      
-     <section>
-      <h1>Сети для моделирования системы персонажей</h1>
+     <section  data-background-image="Pictures/inostr/v1p1opacity20.png" data-background-size="contain">
+      <h2>Сети для моделирования системы персонажей (филология и вокруг неё)</h2>
      </section>
      
      <section>
@@ -557,8 +645,8 @@
 					<img data-src="Pictures/Alice.png" >
 					</section> -->
 					<section>
-					<h3>..много последователей, но почти никто не литературовед:</h3>
-					<ul style="font-size:74%">
+					<h3>..много последователей, но никто не литературовед:</h3>
+					<ul style="font-size:70%">
 						<li>James Stiller, Daniel Nettle, and Robin I. M. Dunbar (2003) The Small World of Shakespeare’s Plays.Human Nature 14(4):397---408. </li>
 						<li>“Weak Links and Scene Cliques Within the Small World of Shakespeare,” Journal of Cultural and Evolutionary Psychology 3, no. 1 (2005) </li>
 						<li>Elson, D. K., Dames, N. and McKeown, K. (2010), Extracting Social Networks from Literary Fiction, Proceedings of ACL 2010, Uppsala, Sweden. </li>
@@ -572,13 +660,13 @@
 					<section>
 						<h4>Франко Моретти 'переоткрывает' сетевой анализ для филологов</h4>
 						<img data-src="Pictures/hamlet.png" height='400'>
-						<br/><citation>Franco Moretti. Network Theory, Plot Analysis (Chapter 9 of the “Distant Reading” book)</citation>
+					 <p style="font-size:50%">Franco Moretti. Network Theory, Plot Analysis (Chapter 9 of the “Distant Reading” book)</p>
 					</section>
 
 					<section>
 						<h3>Моретти агитирует за сетевые модели</h3>
 						<p style="font-size:80%">"[Networks] <span class="fragment highlight-red">make visible specific ‘regions’ within the plot</span> as a whole <...>. Take the characters who are connected to both Claudius and Hamlet <...>: except for Osric and Horatio, whose link to Claudius is however extremely tenuous, they are all killed <...>; what is truly deadly, is the <span class="fragment highlight-red">characters’ position in the network</span>, chained to the warring poles of king and prince. Outside of that bold region, no one dies in Hamlet. The tragedy is all there".</p>
-						<citation>Franco Moretti. Network Theory, Plot Analysis (Chapter 9 of the “Distant Reading” book)</citation>
+					 <p style="font-size:50%">Franco Moretti. Network Theory, Plot Analysis (Chapter 9 of the “Distant Reading” book)</p>
 					</section> 
 
 
@@ -588,10 +676,9 @@
 						<citation>Franco Moretti. Network Theory, Plot Analysis (Chapter 9 of the “Distant Reading” book)</citation>
 					</section>
 
-					<section data-background-image="Pictures/germansuperposter.png" data-background-size="cover"><h1>DraCor позволяет масштабировать такое на сотни сетей</h1></section>
+     <section data-background-image="Pictures/germansuperposter.png" data-background-size="cover"><h2><a href="https://dracor.org">DraCor</a> позволяет масштабировать такое на сотни сетей</h2></section>
 					<section>
-						<h3>German Corpus: 465 plays</h3>
-						<h4></h4>
+						<h4>Немецкий DraCor: (на картинке 465 пьес, сегодня уже почти 700)</h4>
 						<img data-src="Pictures/germansuperposter.png" >
 					</section>
 
@@ -650,10 +737,9 @@
 						<h4>Можно пытаться выявлять "типы" персонажей на основе положения в сети</h4>
 
 						<img data-src="Pictures/catchprot.png" height="420">
-					</br>
 
 
-						<citation>Fischer F., Trilcke P., Kittel C., Milling C., Skorinkin D. To Catch a Protagonist: Quantitative Dominance Relations in German Language Drama (1730–1930), in: Digital Humanities 2018: Book of Abstracts / Libro de resúmenes. Mexico : Red de Humanidades Digitales A. C., 2018. P. 193-201.</citation> 
+					 <p style="font-size:50%">Fischer F., Trilcke P., Kittel C., Milling C., Skorinkin D. To Catch a Protagonist: Quantitative Dominance Relations in German Language Drama (1730–1930), in: Digital Humanities 2018: Book of Abstracts / Libro de resúmenes. Mexico : Red de Humanidades Digitales A. C., 2018. P. 193-201.</p> 
 					</section>
 
 
@@ -666,7 +752,7 @@
 					<section>
 						<h3>На секунду вернемся к Моретти</h3>
 						<q>Though Horatio is an old fixation of mine, I had never fully understood his role in Hamlet until I looked at the <span class="fragment highlight-red">play’s network structure</span>. </q>
-						<p>Franco Moretti. Network Theory, Plot Analysis (Chapter 9 of the “Distant Reading” book)</p>
+					 <p style="font-size:50%">Franco Moretti. Network Theory, Plot Analysis (Chapter 9 of the “Distant Reading” book)</p>
 					</section>
 
 					<section> 
@@ -678,18 +764,18 @@
 
 						<q>“<..>if we remove, first Hamlet, and then Horatio <..>, then the fragmentation is so radical that the Ghost and Fortinbras — which is to say, the beginning and the ending of the play — are completely severed from each other and from the rest of the plot. <span class="fragment highlight-red">Hamlet no longer exists</span>. And yet, <span class="fragment highlight-red">Horatio is slightly less central than Claudius</span> in quantitative terms”</q>
 
-					<p>Franco Moretti. “Distant Reading”</p>
+					 <p style="font-size:50%">Franco Moretti. Network Theory, Plot Analysis (Chapter 9 of the “Distant Reading” book)</p>
 
 					</section>
-					<section>
+					<!-- <section>
 						<h3>Но как мы помним, для этого придуманы разные центральности</h3>
-					</section>
+					</section> -->
 				  <section>
-				    <h4>Степень:</h4>
+				    <h4>Моретти говорит про централность, которая степень (Degree)</h4>
 				    <img data-src="Pictures/degree_demo_alexei_viz.png" height ="500">
 				  </section>
 				  <section>
-				   <h4>Промежуточность/нагрузка ("betweenness"):</h4>
+				   <h4>Но есть еще и промежуточность/нагрузка ("betweenness"):</h4>
 				    <img data-src="Pictures/betweenness_demo_alexei_viz.png" height ="500">
 				  </section>
 
@@ -742,8 +828,8 @@
 					<section>
 						<h3>Гаврила Пушкин: betweenness</h3>
 						<img data-src="Pictures/pictures_cameraready/figure 14 godunovBetweenness2.png"  height="490">
-						<p>Размер узла и подписи = betweenness</p>
-						<p>Gavrila the messenger</p>
+					 <p style="font-size:30%">Размер узла и подписи = betweenness</p>
+					 <p style="font-size:30%">Гаврила Пушкин на посылках</p>
 					</section>
 
 					<section>
@@ -762,13 +848,13 @@
 					<section>
 						<h3>Битяговский (двойной агент)</h3>
 						<img data-src="Pictures/bityag.png"  height="490">
-						<p>А.К. Толстой, Смерть Иоанна Грозного (1866)</p>
+					 <p style="font-size:50%">А.К. Толстой, Смерть Иоанна Грозного (1866)</p>
 					</section>
 
 					<section>
 			      <h4>Калачник (еще один агент)</h4>
 			      <img data-src="Pictures/kalachnik.png"  height="490" >
-			      <p>А.Н. Островский, Димитрий Самозванец и Василий Шуйский (1866)</p>
+					 <p style="font-size:50%">А.Н. Островский, Димитрий Самозванец и Василий Шуйский (1866)</p>
 			    </section>
 			    <section>
 			      <h4>Калачник о себе</h4>
@@ -786,9 +872,9 @@
 
 			    	</section>  
 					<section>
-						<h3>Битков (соглядатай при Пушкине)</h3>
-						<img data-src="Pictures/bitkov.png" >
-						<p>М.А. Булгаков, "Пушкин, (Последние дни)" (1935)</p>
+						<h4>Битков (соглядатай при Пушкине)</h4>
+						<img data-src="Pictures/bitkov.png" height=500>
+					 <p  style="font-size:50%">М.А. Булгаков, "Пушкин, (Последние дни)" (1935)</p>
 					</section>
 					<section>
 						<h2>Теперь еще разок вернемся на макро-уровень</h2>
@@ -811,14 +897,37 @@
 						<img data-src="Pictures/comedy_non_comedy_loess.png" >
 					</section>
 					<section>
-						<h2>More complex metric: the small-world-ness of network</h2>
+						<h4>Более сложная метрика: small-world-ness (принадлежность к сетям т.н. малого мира)</h4>
 						<img data-src="Pictures/smallsample.png" >
 					</section>
 					<section>
-						<h2>Which plays have 'small world' property?</h2>
+						<h2>Какие пьесы имеют сети типа 'small world'?</h2>
 						<img data-src="Pictures/smallworld_label.png" >
 					</section>
      
+     <section data-background-image="Pictures/inostr/v1p1opacity30.png" data-background-size="contain">
+      <h3>Несколько слов по поводу книги «Война и мир»</h3>
+     </section>
+     <section>
+      <h4>Кластеризация симпатичных Толстому семей</h4>
+      <img data-src="Pictures/inostr/v1p1.png" height="500">
+     </section>
+     <section>
+      <h4>Военные части — менее плотные сети</h4>
+      <img data-src="Pictures/inostr/v3p2.png" height="500">
+     </section>
+     <section>
+      <h4>Адьютанты обладают высокой промежуточностью ('betweennees')</h4>
+      <img data-src="Pictures/inostr/aide_highlight.png" height="500">
+     </section>
+     <section>
+      <h4>Адьютанты обладают высокой промежуточностью ('betweennees')</h4>
+      <img data-src="Pictures/inostr/aide_de_camp_bars_highlight.png" height="500">
+     </section>
+     <section>
+      <h4>Максимально плотный эпилог (но две семьи )</h4>
+      <img data-src="Pictures/inostr/wap_epilogue.png" height="500">
+     </section>
      
     </section>
      
